@@ -18,7 +18,8 @@
 
 <h3>簡単な自己紹介</h3>
 
-<p>準備中
+<p>Web 系からアプリ系まで触る雑食プログラマーです。</p>
+<p>好きな言語は TypeScript と C# で、Windows もしくは Linux で開発しています。</p>
 
 </section>
 <!-- } simple profile -->
