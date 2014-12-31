@@ -29,7 +29,7 @@ module.exports = (grunt) ->
     concurrent:
       options:
         logConcurrentOutput: false
-      lint: ['phplint']
+      lint: ['phplint', 'csslint']
   
   grunt.registerTask 'lint', 'concurrent:lint'
   grunt.registerTask 'test', ['lint']
