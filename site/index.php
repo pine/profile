@@ -96,7 +96,7 @@
 	$title_ja   = $contents[$page]['title_ja'];
 	$title_en   = $contents[$page]['title_en'];
 	$background = $backgrounds[array_rand($backgrounds)];
-	$url        = $url_base.'?'.$page;
+	$url        = $url_base.'/'.$page.'.html';
     
     $last_modified = get_last_modified($page);
 	
