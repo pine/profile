@@ -9,7 +9,8 @@
 	
 	// メニュー
 	$menu = array(
-		'default'
+		'default',
+        'site_info'
 	);
 	
 	// ページ一覧
