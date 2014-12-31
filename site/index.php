@@ -30,6 +30,17 @@
 		return null;
 	}
 	
+    // Trident のバージョンを返す
+    function get_trident_version(){
+        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+		
+		if(preg_match('/Trident\/([\d\.]+)/', $user_agent, $matches)){
+			return $matches[1];
+		}
+        
+        return null;
+    }
+    
 	// WebP をサポートしているか返す
 	function is_support_webp($user_agent = null){
 		
@@ -50,6 +61,11 @@
 		return false;
 	}
 	
+    // JPEG XR がサポートされる環境であるか返す
+    function is_support_jxr(){
+        return get_ie_major_version() >= 9 || version_compare('7.0', get_trident_version(), '<=');
+    }
+    
 	// IsPresto
 	function is_presto(){
 		$user_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -116,7 +132,7 @@
 	define('PRESTO', is_presto());
 	
 	// IE9 以降なら JPEG XR に拡張子を変更する。
-	if(IE && IE_VERSION_MAJOR >= 9){
+	if(is_support_jxr()){
 		$background = str_replace('.jpg', '.wdp', $background);
 	}
 	
