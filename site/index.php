@@ -71,26 +71,6 @@
 		return strtotime($date);
 	}
 	
-	// UTF-8 でメールを送信する
-	function mail_utf8($to, $subject, $message, $headers){
-	
-		if(is_windows()){
-			$message = str_replace("\n.", "\n..", $message);
-		}
-		
-		$headers = "Content-Type: text/plain; charset=utf-8\r\n".$headers;
-		$headers = "Content-Transfer-Encoding: base64\r\n".$headers;
-		
-		mail(
-			$to,
-			mb_encode_mimeheader($subject),
-			base64_encode($message),
-			$headers
-		);
-	}
-	
-//	mail_utf8('k-m-k-m@hotmail.co.jp', 'テスト', 'てす', 'From: aaa@aaa.co.jp');
-	
 	// page パラメータが渡されている場合
 	if(!@empty($_GET['page'])){
 		// page パラメーターが有効な場合
