@@ -18,6 +18,12 @@
 			'document' => $contents_dir.'/default.inc',
 			'title_ja' => 'トップページ',
 			'title_en' => 'Top Page'
+		),
+		
+		'404' => array(
+			'document' => $contents_dir.'/404.inc',
+			'title_ja' => 'ページが見つかりません',
+			'title_en' => '404 Not Found'
 		)
 	);
 	
