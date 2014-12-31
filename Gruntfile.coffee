@@ -23,10 +23,18 @@ module.exports = (grunt) ->
     coffeelint:
       files: ['*.coffee']
     
+    htmlhint:
+      options:
+        htmlhintrc: '.htmlhintrc'
+      files: [
+        'site/index.inc'
+        'site/contents/*.inc'
+      ]
+    
     concurrent:
       options:
         logConcurrentOutput: false
-      lint: ['phplint', 'csslint', 'coffeelint']
+      lint: ['phplint', 'csslint', 'coffeelint', 'htmlhint']
   
   grunt.registerTask 'lint', 'concurrent:lint'
   grunt.registerTask 'test', ['lint']
