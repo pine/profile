@@ -92,11 +92,9 @@ window.attachEvent("onload", function(){
 <!-- } article text -->
 
 <!-- article footer { -->
-<!--
 <footer>
 <p>最終更新日時: <time datetime="<?php echo date(DATE_W3C, $last_modified) ?>"><?php echo date('Y年m月d日 H:i', $last_modified) ?></time></p>
 </footer>
--->
 <!-- } article footer -->
 
 </article>
