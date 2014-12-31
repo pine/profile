@@ -23,9 +23,10 @@ module.exports = (grunt) ->
       files: ['*.coffee']
     
     concurrent:
-      lint: ['csslint', 'jshint', 'phplint', 'coffeelint']
+      lint: ['phplint']
   
   grunt.registerTask 'lint', 'concurrent:lint'
+  grunt.registerTask 'test', ['lint']
   grunt.registerTask 'default', []
   
   require('load-grunt-tasks')(grunt)
