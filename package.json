@@ -20,7 +20,6 @@
     "grunt-coffeelint": "0.0.13",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-csslint": "^0.3.1",
-    "grunt-contrib-jshint": "^0.10.0",
     "load-grunt-tasks": "^2.0.0",
     "phplint": "^1.2.0"
   }

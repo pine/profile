@@ -9,9 +9,6 @@ module.exports = (grunt) ->
         'site/contents/*.css'
       ]
     
-    jshint:
-      files: []
-    
     phplint:
       options:
         limit: 10
@@ -29,7 +26,7 @@ module.exports = (grunt) ->
     concurrent:
       options:
         logConcurrentOutput: false
-      lint: ['phplint', 'csslint']
+      lint: ['phplint', 'csslint', 'coffeelint']
   
   grunt.registerTask 'lint', 'concurrent:lint'
   grunt.registerTask 'test', ['lint']
