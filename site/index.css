@@ -54,7 +54,7 @@ a:active {
 body {
 	position: relative;
 	background: black repeat fixed;
-	padding: 30px 0px;
+	padding: 30px 0;
 	color: black;
 	height: 100%;
 }
@@ -108,8 +108,8 @@ body > section > header p:before {
 	position: absolute;
 	left: -49px;
 	top: 0;
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	border-left: solid 49px transparent;
     border-bottom: solid 85px rgba(255, 255, 255, .5);
     content: "";
@@ -187,7 +187,7 @@ body > section > header p:before {
 
 /* 記事 */
 .wrap > article {
-	margin: 0px 0 0 230px;
+	margin: 0 0 0 230px;
 	padding-bottom: 15px;
 	width: 566px;
 	border-left: 1px solid white;
@@ -249,7 +249,7 @@ body > section > header p:before {
 }
 
 .wrap > article > section h3 {
-	margin: 15px 0px 15px -1em;
+	margin: 15px 0 15px -1em;
 	padding: 0 0 3px 0;
 	border-bottom: 3px double white;
 	color: #adceff;

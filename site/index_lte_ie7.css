@@ -17,7 +17,7 @@ sup {
 .wrap > nav header p,
 .wrap > article header p {
 	top: -6px; /* fix only IE7 */
-	_top: 0px;
+	_top: 0;
 }
 
 /* 三角形を削除 */
@@ -28,7 +28,7 @@ header p:before {
 /* ラップ */
 .wrap {
 	position: relative;
-	margin: 0px;
+	margin: 0;
 	top: 20px;
 }
 
