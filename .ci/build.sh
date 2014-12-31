@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "npm install -q"
+echo "> npm install -q"
 npm install -q
 
-echo "npm test"
+echo "> npm test"
 npm test
