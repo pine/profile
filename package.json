@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:pine613/profile-test.git"
+    "url": "git://github.com/pine613/profile-website.git"
   },
   "author": "",
   "license": "ISC",
