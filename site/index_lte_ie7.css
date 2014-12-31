@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* 全体 */
+/* ボックスを下にずらした分の padding を増やす */
+body {
+	padding-bottom: 70px;
+}
+
+/* 行が潰れるため、擬似的に再現 */
+sup {
+	display: inline-block;
+	margin-top: -5px;
+	vertical-align: text-top;
+}
+
+/* 小見出しの日本語文のズレを直す */
+.wrap > nav header p,
+.wrap > article header p {
+	top: -6px; /* fix only IE7 */
+	_top: 0px;
+}
+
+/* 三角形を削除 */
+header p:before {
+	display: none;
+}
+
+/* ラップ */
+.wrap {
+	position: relative;
+	margin: 0px;
+	top: 20px;
+}
+
+/* モダンブラウザ向けの clearfix を無効化 */
+/* (中央の罫線が途切れるバグの対策) */
+.wrap:after {
+	display: none;
+}
+
+/* 記事 */
+/* IE7 でなぜかずれるので修正 */
+.wrap > article {
+	position: relative;
+	left: -1px;
+}
+
+/* フッター */
+body > section > footer {
+	position: relative;
+	margin: 0;
+	top: 40px;
+}

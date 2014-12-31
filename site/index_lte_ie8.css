@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* ヘッダ */
+body > section > header {
+	-pie-background: rgba(0, 0, 0, .45);
+	behavior: url(PIE.php);
+}
+
+body > section > header p {
+	color: white;
+}
+
+/* ラップ */
+.wrap {
+	-pie-background: rgba(0, 0, 0, .65);
+	zoom: 1; /* clearfix for IE */
+	behavior: url(PIE.php);
+}
+
+/* メニュー */
+.wrap > nav header p {
+	color: white;
+}
+
+/* 記事 */
+.wrap > article header p {
+	color: white;
+}
+
+/* フッター */
+body > section > footer {
+	-pie-background: rgba(0, 0, 0, .65);
+	behavior: url(PIE.php);
+}
+
+/* for IE6 */
+section header, section footer {
+	_behavior: url(PIE.php);
+}
+
+section * header, section * footer { /* 直接の子要素以外を無効化 */
+	_behavior: none;
+}
