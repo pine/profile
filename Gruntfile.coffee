@@ -23,6 +23,8 @@ module.exports = (grunt) ->
       files: ['*.coffee']
     
     concurrent:
+      options:
+        logConcurrentOutput: false
       lint: ['phplint']
   
   grunt.registerTask 'lint', 'concurrent:lint'
