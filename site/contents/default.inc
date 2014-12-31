@@ -25,4 +25,15 @@
 </section>
 <!-- } simple profile -->
 
+<!-- renewal { -->
+<section>
+
+<h3>リニューアルについて</h3>
+
+<p>只今、全面リニューアル中につき、コンテンツに過不足がありますので、ご承知ください。</p>
+<p>従来の「レンタルサーバー + Apache + PHP」の構成を、「AWS + Chef + nginx + PHP (FastCGI) + CI (drone.io)」に移行中...</p>
+
+</section>
+<!-- } renewal -->
+
 <!-- vim: se noet ts=4 sw=4 sts=4 ft=php : -->
