@@ -4,7 +4,7 @@
 	$default         = 'default';
 	$not_found       = '404';
 	$contents_dir    = dirname(__FILE__).'/contents'; // 絶対パス
-	$backgrounds_dir = 'img'; // 相対URL
+	$backgrounds_dir = 'img/bg'; // 相対URL
 	$url_base        = 'http://profile.pine.moe';
 	
 	// メニュー
