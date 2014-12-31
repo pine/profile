@@ -37,6 +37,7 @@ module.exports = (grunt) ->
     concurrent:
       options:
         logConcurrentOutput: false
+        limit: 2
       lint: [
         'phplint'
         'csslint'
