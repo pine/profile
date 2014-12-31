@@ -1,0 +1,10 @@
+{
+    "box-model": false,
+    "fallback-colors": false,
+    "important": false,
+    "namespaced": false,
+    "unique-headings": false,
+    "qualified-headings": false,
+    "font-sizes": false,
+    "underscore-property-hack": false
+}

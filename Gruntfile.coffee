@@ -2,8 +2,12 @@ module.exports = (grunt) ->
   grunt.initConfig
     csslint:
       options:
+        csslintrc: '.csslintrc'
         import: false
-      files: ['site/index.css']
+      files: [
+        'site/index*.css'
+        'site/contents/*.css'
+      ]
     
     jshint:
       files: []
