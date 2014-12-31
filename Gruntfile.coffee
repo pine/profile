@@ -31,10 +31,19 @@ module.exports = (grunt) ->
         'site/contents/*.inc'
       ]
     
+    jsonlint:
+      files: ['*.json', 'site/**/*.json']
+    
     concurrent:
       options:
         logConcurrentOutput: false
-      lint: ['phplint', 'csslint', 'coffeelint', 'htmlhint']
+      lint: [
+        'phplint'
+        'csslint'
+        'coffeelint'
+        'htmlhint'
+        'jsonlint'
+      ]
   
   grunt.registerTask 'lint', 'concurrent:lint'
   grunt.registerTask 'test', ['lint']
