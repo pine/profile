@@ -19,6 +19,12 @@
 			'title_ja' => 'トップページ',
 			'title_en' => 'Top Page'
 		),
+        
+        'site_info' => array(
+			'document' => $contents_dir.'/site_info.inc',
+			'title_ja' => 'サイト情報',
+			'title_en' => 'Site Information'
+		),
 		
 		'404' => array(
 			'document' => $contents_dir.'/404.inc',
