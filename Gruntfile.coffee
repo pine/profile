@@ -1,3 +1,6 @@
+_ = require 'lodash'
+isWin = /^win/.test process.platform
+
 module.exports = (grunt) ->
   grunt.initConfig
     csslint:
@@ -34,17 +37,20 @@ module.exports = (grunt) ->
     jsonlint:
       files: ['*.json', 'site/**/*.json']
     
+    bashlint:
+      ci: ['.ci/**/*.sh']
+      site: ['site/**/*.sh']
+    
     concurrent:
       options:
         logConcurrentOutput: false
-        limit: 2
-      lint: [
+      lint: _.union([
         'phplint'
         'csslint'
         'coffeelint'
         'htmlhint'
         'jsonlint'
-      ]
+      ], !isWin && ['bashlint'])
   
   grunt.registerTask 'lint', 'concurrent:lint'
   grunt.registerTask 'test', ['lint']
