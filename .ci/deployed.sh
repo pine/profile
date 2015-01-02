@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo 'wget localhost/default.html'
-wget -O - localhost/default.html > /dev/null
+echo 'wget http://profile.pine.moe/default.html'
+wget -O - http://profile.pine.moe/default.html > /dev/null
