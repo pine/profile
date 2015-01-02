@@ -28,8 +28,18 @@ window.attachEvent("onload", function(){
 	element.setAttribute("rel", "stylesheet");
 	element.setAttribute("type", "text/css");
 	element.setAttribute("href", "/index_lte_ie8.css");
-
-	document.getElementsByTagName("head")[0].appendChild(element);
+	
+	var header = document.getElementsByTagName("head")[0];
+	var p = header.getElementsByTagName("p")[0];
+	
+	var timerId = setInterval(function(){
+		var color = p.currentStyle.color;
+		
+		if(color == "white"){
+			clearInterval(timerId);
+			document.getElementsByTagName("head")[0].appendChild(element);
+		}
+	}, 100);
 });
 
 </script>
