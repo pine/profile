@@ -46,7 +46,7 @@ window.attachEvent("onload", function(){
 
 <!-- header { -->
 <header>
-<a href=".">
+<a href="/">
 <h1 lang="en">Pine Profile</h1>
 <p>水音氷音 (ぴね) プロフィール</p>
 </a>
