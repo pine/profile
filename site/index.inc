@@ -29,7 +29,7 @@ window.attachEvent("onload", function(){
 	element.setAttribute("type", "text/css");
 	element.setAttribute("href", "/index_lte_ie8.css");
 	
-	var header = document.getElementsByTagName("head")[0];
+	var header = document.getElementsByTagName("header")[0];
 	var p = header.getElementsByTagName("p")[0];
 	
 	var timerId = setInterval(function(){
