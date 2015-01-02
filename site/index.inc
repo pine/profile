@@ -4,14 +4,14 @@
 <head>
 <meta charset="utf-8">
 <link rel="canonical" href="<?php echo $url ?>">
-<?php if(IE && IE_VERSION_MAJOR <= 8): ?><script src="html5.js"></script><?php endif ?>
-<link rel="stylesheet" type="text/css" href="html5reset.css">
-<link rel="stylesheet" type="text/css" href="index.css">
-<?php if(IE && IE_VERSION_MAJOR >= 7 && IE_VERSION_MAJOR <= 8): ?><link rel="stylesheet" type="text/css" href="index_lte_ie8.css"><?php endif ?>
-<?php if(IE && IE_VERSION_MAJOR <= 7): ?><link rel="stylesheet" type="text/css" href="index_lte_ie7.css"><?php endif ?>
-<?php if(IE && IE_VERSION_MAJOR <= 6): ?><link rel="stylesheet" type="text/css" href="index_lte_ie6.css"><?php endif ?>
-<?php if(IE && IE_VERSION_MAJOR <= 7): ?><script src="IE8.js"></script><?php endif ?>
-<?php if(IE && IE_VERSION_MAJOR <= 6): ?><script src="ie7-squish.js"></script><?php endif ?>
+<?php if(IE && IE_VERSION_MAJOR <= 8): ?><script src="/html5.js"></script><?php endif ?>
+<link rel="stylesheet" type="text/css" href="/html5reset.css">
+<link rel="stylesheet" type="text/css" href="/index.css">
+<?php if(IE && IE_VERSION_MAJOR >= 7 && IE_VERSION_MAJOR <= 8): ?><link rel="stylesheet" type="text/css" href="/index_lte_ie8.css"><?php endif ?>
+<?php if(IE && IE_VERSION_MAJOR <= 7): ?><link rel="stylesheet" type="text/css" href="/index_lte_ie7.css"><?php endif ?>
+<?php if(IE && IE_VERSION_MAJOR <= 6): ?><link rel="stylesheet" type="text/css" href="/index_lte_ie6.css"><?php endif ?>
+<?php if(IE && IE_VERSION_MAJOR <= 7): ?><script src="/IE8.js"></script><?php endif ?>
+<?php if(IE && IE_VERSION_MAJOR <= 6): ?><script src="/ie7-squish.js"></script><?php endif ?>
 <style>
 
 body {
@@ -27,7 +27,7 @@ window.attachEvent("onload", function(){
 	var element = document.createElement("link");
 	element.setAttribute("rel", "stylesheet");
 	element.setAttribute("type", "text/css");
-	element.setAttribute("href", "index_lte_ie8.css");
+	element.setAttribute("href", "/index_lte_ie8.css");
 
 	document.getElementsByTagName("head")[0].appendChild(element);
 });
