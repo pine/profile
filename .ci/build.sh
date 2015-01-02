@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "> which php"
-which php
+echo "> php -v"
+php -v
 
 echo "> npm install -q"
 npm install -q
