@@ -11,7 +11,7 @@
 	$menu = array(
 		'default',
         'light_novel',
-        'link'
+        'link',
         'site_info'
 	);
 	
