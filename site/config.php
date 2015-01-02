@@ -11,6 +11,7 @@
 	$menu = array(
 		'default',
         'light_novel',
+        'link'
         'site_info'
 	);
 	
@@ -32,6 +33,12 @@
 			'document' => $contents_dir.'/site_info.inc',
 			'title_ja' => 'サイト情報',
 			'title_en' => 'Site Information'
+		),
+		
+		'link' => array(
+			'document' => $contents_dir.'/link.inc',
+			'title_ja' => 'リンク',
+			'title_en' => 'Link'
 		),
 		
 		'404' => array(
