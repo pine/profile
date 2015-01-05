@@ -9,6 +9,21 @@
 </section>
 <!-- } light novel -->
 
+<!-- active { -->
+<section>
+
+<h3>最新刊まで追っている本</h3>
+
+<p>最新刊の発売を追って読んでいる本です。</p>
+
+<ul>
+	<li>機巧少女は傷つかない</li>
+	<li>俺の彼女と幼なじみが修羅場すぎる</li>
+</ul>
+
+</section>
+<!-- } active -->
+
 <!-- read book { -->
 <section>
 
