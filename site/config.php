@@ -10,6 +10,7 @@
 	// メニュー
 	$menu = array(
 		'default',
+		'program',
         'light_novel',
         'link',
         'site_info'
@@ -22,7 +23,13 @@
 			'title_ja' => 'トップページ',
 			'title_en' => 'Top Page'
 		),
-        
+		
+		'program' => array(
+			'document' => $contents_dir.'/program.inc',
+			'title_ja' => 'プログラミング',
+			'title_en' => 'Programing'
+		),
+		
         'light_novel' => array(
 			'document' => $contents_dir.'/light_novel.inc',
 			'title_ja' => 'ライトノベル',
