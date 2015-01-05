@@ -1,7 +1,7 @@
 <?php
 	require_once(dirname(__FILE__).'/config.php');
 	
-	ini_set('display_errors', 'On');
+	ini_set('display_errors', 'On')
 	error_reporting(-1);
 	
 	// 文字コードの設定
