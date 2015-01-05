@@ -32,6 +32,7 @@
 
 <p>只今、全面リニューアル中につき、コンテンツに過不足がありますので、ご承知ください。</p>
 <p>従来の「レンタルサーバー + Apache + PHP」の構成を、「AWS + Chef + nginx + PHP (FastCGI) + CI (drone.io)」に移行中...</p>
+<p>hogehoge</p>
 
 </section>
 <!-- } renewal -->
