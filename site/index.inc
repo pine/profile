@@ -117,7 +117,7 @@ window.attachEvent("onload", function(){
 <footer lang="en">
 <p><small><a href="http://www.yunphoto.net">Photo by (c)Tomo.Yun</a></small></p>
 <p><small>Powered by PHP <?php echo PHP_VERSION ?>, nginx.</small></p>
-<p><small>This page is <a href="http://validator.w3.org/check?uri=referer">valid HTML5</a>, and hosted on <a href="https://github.com/pine613/profile-website.git">GitHub</a>.</small></p>
+<p><small>This page is <a href="http://validator.w3.org/check?uri=referer">valid HTML5</a>, and hosted on <a href="https://github.com/pine613/profile-website">GitHub</a>.</small></p>
 <p><small>Recommended Browsers: Firefox 3.5+, Google Chrome 7+, Opera 10.5+, Safari 5+</small></p>
 <p><small>Copyright &copy; 2011-2012, 2014-2015 <strong lang="ja">水音氷音 (ぴね)</strong>. All Rights Reserved.</small></p>
 </footer>
