@@ -128,7 +128,7 @@ window.attachEvent("onload", function(){
 
 <!-- access analyze { -->
 <span id="noscripttags"><noscript><a href="http://ac7.i2iserv.com/bin/nojslink?00648121" target="_blank"><img src="http://ac7.i2iserv.com/bin/nojs.php?00648121&amp;guid=ON" alt=""></a></noscript></span><span id="prtaglink"><a href="http://www.y-nomnom.info/" target="_blank"><img src="http://image.y-nomnom.info/bnr.gif?00648121" alt="FXってなんでしょう"></a></span>
-<script type="text/javascript" src="http://ac7.i2iserv.com/bin/2nd_gets.php?00648121" async></script>
+<script type="text/javascript" src="http://ac7.i2iserv.com/bin/2nd_gets.php?00648121"></script>
 <!-- } access analyze -->
 
 <?php if(PRESTO): ?>
