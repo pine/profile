@@ -40,6 +40,17 @@ module.exports = (grunt) ->
     bashlint:
       ci: ['.ci/**/*.sh']
       site: ['site/**/*.sh']
+      
+    jshint:
+      options:
+        jshintrc: true
+      
+      files: [
+        'site/**/*.js'
+        '!site/html5.js'
+        '!site/ie7-squish.js'
+        '!site/IE8.js'
+      ]
     
     concurrent:
       options:
@@ -50,6 +61,7 @@ module.exports = (grunt) ->
         'coffeelint'
         'htmlhint'
         'jsonlint'
+        'jshint'
       ], !isWin && ['bashlint'])
   
   grunt.registerTask 'lint', 'concurrent:lint'
