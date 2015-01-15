@@ -19,31 +19,7 @@ body {
 }
 
 </style>
-
-<?php if(IE && IE_VERSION_MAJOR <= 6): ?>
-<script>
-
-window.attachEvent("onload", function(){
-	var element = document.createElement("link");
-	element.setAttribute("rel", "stylesheet");
-	element.setAttribute("type", "text/css");
-	element.setAttribute("href", "/index_lte_ie8.css");
-	
-	var header = document.getElementsByTagName("header")[0];
-	var p = header.getElementsByTagName("p")[0];
-	
-	var timerId = setInterval(function(){
-		var color = p.currentStyle.color;
-		
-		if(color == "white"){
-			clearInterval(timerId);
-			document.getElementsByTagName("head")[0].appendChild(element);
-		}
-	}, 100);
-});
-
-</script>
-<?php endif ?>
+<?php if(IE && IE_VERSION_MAJOR <= 6): ?><script src="/index_lte_ie6.js"></script><?php endif ?>
 <title>水音氷音 (ぴね) プロフィール: <?php echo $title_ja ?></title>
 </head>
 
