@@ -11,6 +11,7 @@
 	$menu = array(
 		'default',
 		'program',
+		'anime',
         'light_novel',
         'link',
         'site_info'
@@ -28,6 +29,12 @@
 			'document' => $contents_dir.'/program.inc',
 			'title_ja' => 'プログラミング',
 			'title_en' => 'Programing'
+		),
+		
+		'anime' => array(
+			'document' => $contents_dir.'/anime.inc',
+			'title_ja' => 'アニメ',
+			'title_en' => 'Anime'
 		),
 		
         'light_novel' => array(
