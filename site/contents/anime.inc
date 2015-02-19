@@ -155,6 +155,7 @@
 	<li>GOSICK -ゴシック-</li>
 	<li>IS 〈インフィニット・ストラトス〉</li>
 	<li>STEINS;GATE</li>
+	<li>神のみぞ知るセカイII</li>
 	<li>これはゾンビですか?</li>
 	<li>灼眼のシャナIII (Final)</li>
 	<li>フラクタル</li>
