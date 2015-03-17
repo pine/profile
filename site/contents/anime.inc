@@ -70,6 +70,7 @@
 	<li>Fate/stay night</li>
 	<li>Kanon</li>
 	<li>Soul Link</li>
+	<li>Strawberry Panic</li>
 	<li>xxxHOLiC</li>
 	<li>うたわれるもの</li>
 	<li>ゼロの使い魔</li>
