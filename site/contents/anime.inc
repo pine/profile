@@ -210,6 +210,7 @@
 	<!-- 英字 -->
 	<li>Fate/kaleid liner プリズマ☆イリヤ 2wei!</li>
 	<li>selector infected WIXOSS</li>
+	<li>SHIROBAKO</li>
 	
 	<!-- あ -->
 	<li>アカメが斬る！</li>
@@ -261,6 +262,12 @@
 	<!-- や -->
 	<li>ヤマノススメ セカンドシーズン</li>
 	<li>結城友奈は勇者である</li>
+	</ul>
+</li>
+<li>2015
+	<ul>
+	<li>アブソリュート・デュオ</li>
+	<li>銃皇無尽のファフニール</li>
 	</ul>
 </li>
 </ul>
