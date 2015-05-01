@@ -40,5 +40,5 @@ Twitter: @rich_clark
 ```
 
 ## License
-MIT License
+MIT License<br />
 Copyright (c) 2011-2012, 2014-2015 Pine Mizune
