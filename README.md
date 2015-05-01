@@ -39,5 +39,6 @@ Twitter: @rich_clark
 */
 ```
 
-## Author
-Pine Mizune
+## License
+MIT License
+Copyright (c) 2011-2012, 2014-2015 Pine Mizune
