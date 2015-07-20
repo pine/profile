@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# spawn-fcgi   Start and stop FastCGI processes
+#
+# chkconfig:   - 80 20
+# description: Spawn FastCGI scripts to be used by web servers
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+SPAWNFCGI="/usr/bin/spawn-fcgi"
+PHPFCGI="/usr/bin/php-cgi"
+FCGIPORT="9000"
+FCGIADDR="127.0.0.1"
+PHP_FCGI_CHILDREN=5
+PHP_FCGI_MAX_REQUESTS=1000
+ALLOWED_ENV="PATH USER"
+USER=nginx
+GROUP=nginx
+PIDFILE=/var/run/phpfcgi.pid
+
+ALLOWED_ENV="$ALLOWED_ENV PHP_FCGI_CHILDREN PHP_FCGI_MAX_REQUESTS FCGI_WEB_SERVER_ADDRS"
+
+case "$1" in
+  start)
+        PHPFCGI_START=$"Starting ${NAME} service: "
+        echo -n $PHPFCGI_START
+
+        # clean environment
+        E=
+        for i in $ALLOWED_ENV; do E="$E $i=${!i}"; done
+        daemon $SPAWNFCGI -a ${FCGIADDR} -p ${FCGIPORT} -u ${USER} -g ${GROUP} -P ${PIDFILE} -C ${PHP_FCGI_CHILDREN} -f ${PHPFCGI}
+        RETVAL=$?
+        ;;
+  stop)
+        echo -n "Stopping php-fcgi: "
+        killproc -p $PIDFILE phpfcgi
+        echo
+        RETVAL=$?
+        ;;
+  *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
+exit $RETVAL
