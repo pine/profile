@@ -28,10 +28,7 @@ ADD . /tmp/www
 RUN rm -rf /var/www/html
 RUN ln -s /tmp/www/site /var/www/html
 
-ADD conf/setup.bash /tmp/setup.bash
-RUN chmod +x /tmp/setup.bash
-
 CMD service nginx start && \
     service php-fastcgi start && \
-    /bin/bash -l
+    /bin/bash -r
 
