@@ -1,5 +1,10 @@
+{% extends "layout/master.html" %}
 
-<!-- site info { -->
+{% block title_ja %}トップページ{% endblock %}
+{% block title_en %}Top Page{% endblock %}
+
+{% block article %}
+
 <section>
 
 <h3>サイト概要</h3>
@@ -11,9 +16,7 @@
 <p>HTML5・CSS3・PHP5 を使ってこのサイトを作成しています。</p>
 
 </section>
-<!-- } site info -->
 
-<!-- simple profile { -->
 <section>
 
 <h3>簡単な自己紹介</h3>
@@ -23,9 +26,7 @@
 <p>東京の IT 系の会社で働いています。</p>
 
 </section>
-<!-- } simple profile -->
 
-<!-- renewal { -->
 <section>
 
 <h3>リニューアルについて</h3>
@@ -33,6 +34,5 @@
 <p>只今、全面リニューアル中につき、コンテンツに過不足がありますので、ご承知ください。</p>
 
 </section>
-<!-- } renewal -->
 
-<!-- vim: se noet ts=4 sw=4 sts=4 ft=php : -->
+{% endblock %}

@@ -11,6 +11,7 @@ $container['view'] = function ($c) {
         $c['router'],
         $c['request']->getUri()
     ));
+	$view['php_version'] = PHP_VERSION;
 
     return $view;
 };
