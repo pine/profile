@@ -4,4 +4,6 @@ set -e
 # Build PHP extra's
 # Update conf/ini filesand install pecl extensions
 ${OPENSHIFT_PHP_DIR}/bin/control build
-
+cd ${OPENSHIFT_REPO_DIR}
+${OPENSHIFT_PHP_DIR}/composer/bin/composer install
+${OPENSHIFT_PHP_DIR}/composer/bin/composer dump-autoload
