@@ -38,9 +38,13 @@
 </header>
 
 <ul>
-<!-- <?php foreach($menu as $key): ?>                                                                                                                                            -->
-<!-- <li><?php if($key != $page): ?><a href="/<?php echo $key ?>.html"><?php endif ?><?php echo $contents[$key]['title_ja'] ?><?php if($key != $page): ?></a><?php endif ?></li> -->
-<!-- <?php endforeach ?>                                                                                                                                                         -->
+{% for menu in menus %}
+{% if menu.active %}
+<li>{{ menu.title }}</li>
+{% else %}
+<li><a href="{{ menu.path }}">{{ menu.title }}</a></li>
+{% endif %}
+{% endfor %}
 </ul>
 <!-- } menu link -->
 
