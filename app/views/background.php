@@ -2,7 +2,7 @@
 
 namespace Views;
 
-class BackgroundExtension extends \Twig_extension {
+class BackgroundExtension extends \Twig_Extension {
 	private $backgrounds = [
 		'yun_1375.jpg',
 		'yun_7604.jpg',

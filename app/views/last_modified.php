@@ -2,7 +2,7 @@
 
 namespace Views;
 
-class LastModifiedExtension extends \Twig_extension {
+class LastModifiedExtension extends \Twig_Extension {
     public function __construct()
     {
     }

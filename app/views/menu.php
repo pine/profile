@@ -2,7 +2,7 @@
 
 namespace Views;
 
-class MenuExtension extends \Twig_extension {
+class MenuExtension extends \Twig_Extension {
     private $router;
     private $request;
 
