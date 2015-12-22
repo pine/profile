@@ -1,4 +1,10 @@
-<!-- programing { -->
+{% extends "layout/master.html" %}
+
+{% block title_ja %}プログラミング{% endblock %}
+{% block title_en %}Programming{% endblock %}
+
+{% block article %}
+
 <section>
 
 <h3>プログラミング全般</h3>
@@ -7,9 +13,7 @@
 <p>低レイヤ (アセンブラ, C / C++, etc) ～ 高レイヤ (JavaScript, Ruby, etc) まで書きます。</p>
 
 </section>
-<!-- } programing -->
 
-<!-- programing language { -->
 <section>
 
 <h3>プログラミング言語</h3>
@@ -63,9 +67,7 @@
 </ul>
 
 </section>
-<!-- } programing language -->
 
-<!-- license { -->
 <section>
 
 <h3>資格</h3>
@@ -76,6 +78,5 @@
 </ul>
 
 </section>
-<!-- } license -->
 
-<!-- vim: se noet ts=4 sw=4 sts=4 ft=php : -->
+{% endblock %}

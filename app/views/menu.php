@@ -2,24 +2,15 @@
 
 namespace Views;
 
-use FastRoute\Dispatcher;
-
 class MenuExtension extends \Twig_extension {
     private $router;
     private $request;
 
-    private $menus = [
-        [
-            'name'  => 'index',
-            'path'  => '/',
-            'title' => 'トップページ',
-        ],
-    ];
-
-    public function __construct($router, $request)
+    public function __construct($router, $request, $menus)
     {
         $this->router  = $router;
         $this->request = $request;
+        $this->menus   = $menus;
     }
 
     public function getName()
@@ -29,23 +20,23 @@ class MenuExtension extends \Twig_extension {
 
     public function getGlobals()
     {
+        $name = $this->getRouteName();
         return [
-            'menus' => $this->getMenus(),
+            'name'  => $name,
+            'menus' => $this->getMenus($name),
         ];
     }
 
-    protected function getRouteName() {
+    private function getRouteName() {
         $routeInfo = $this->router->dispatch($this->request);
 
-        if ($routeInfo[0] === Dispatcher::FOUND) {
+        if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
             $route = $this->router->lookupRoute($routeInfo[1]);
             return $route->getName();
         }
     }
 
-    protected function getMenus() {
-        $name = $this->getRouteName();
-
+    private function getMenus($name) {
         foreach ($this->menus as &$menu) {
             $menu['active'] = $menu['name'] === $name;
         }

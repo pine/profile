@@ -1,4 +1,11 @@
-!-- error { -->
+{% extends "layout/master.html" %}
+
+{% block title_ja %}ページが見つかりません{% endblock %}
+{% block title_en %}404 Not Found{% endblock %}
+
+{% block article %}
+
+<!-- error { -->
 <section>
 
 <h3>ページが見つかりません</h3>
@@ -8,3 +15,7 @@
 
 </section>
 <!-- } error -->
+
+{% endblock %}
+
+{% block last_modified %}{% endblock %}

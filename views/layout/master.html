@@ -5,19 +5,12 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="/css/html5reset.css">
 <link rel="stylesheet" href="/css/app.css">
-<!-- <style>                                              -->
-
-<!-- body {                                               -->
-<!-- 	background-image: url("<?php echo $background ?>"); -->
-<!-- }                                                    -->
-
-<!-- </style>                                             -->
+<style> body { background-image: url("/img/bg/{{ background }}") } </style>
 <title>水音氷音 (ぴね) プロフィール: {% block title_ja %}{% endblock %}</title>
 
 </head>
 
 <body>
-
 
 <section>
 
@@ -39,14 +32,13 @@
 
 <ul>
 {% for menu in menus %}
-{% if menu.active %}
+{% if menu.active -%}
 <li>{{ menu.title }}</li>
-{% else %}
+{% else -%}
 <li><a href="{{ menu.path }}">{{ menu.title }}</a></li>
 {% endif %}
 {% endfor %}
 </ul>
-<!-- } menu link -->
 
 </nav>
 <!-- } menu -->
@@ -61,11 +53,11 @@
 
 {% block article %}{% endblock %}
 
+{% block last_modified %}
 <footer>
-<p>最終更新日時:
-<!-- <time datetime="<?php echo date(DATE_W3C, $last_modified) ?>"><?php echo date('Y年m月d日 H:i', $last_modified) ?></time> -->
-</p>
+<p>最終更新日時: <time datetime="{{ last_modified_for(name) }}">{{ last_modified_for(name)|date('Y年m月d日 H:i') }}</time></p>
 </footer>
+{% endblock %}
 
 </article>
 
