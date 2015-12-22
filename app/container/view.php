@@ -23,7 +23,7 @@ $container['view'] = function ($c) use($routes) {
     ));
 
     $view->addExtension(new \Views\BackgroundExtension);
-    $view->addExtension(new \Views\LastModifiedExtension);
+    //$view->addExtension(new \Views\LastModifiedExtension);
 
     return $view;
 };
