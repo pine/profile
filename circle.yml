@@ -10,6 +10,6 @@ test:
 
 deployment:
   next:
-    branch: next
+    branch: master
     commands:
-      - git push ssh://56796a342d527194e200016a@profile-pinemz2.rhcloud.com/~/git/profile.git/ next:master
+      - git push ssh://56796a342d527194e200016a@profile-pinemz2.rhcloud.com/~/git/profile.git/ master:master
