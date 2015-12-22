@@ -1,6 +1,8 @@
 pine profile website
 --------------------
 
+My profile website (Japanese)
+
 ## Dependencies
 
 - PHP 5.6

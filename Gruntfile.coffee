@@ -8,10 +8,10 @@ module.exports = (grunt) ->
         csslintrc: '.csslintrc'
         import: false
       files: [
-        'site/index*.css'
-        'site/contents/*.css'
+        'public/**/*.css'
+        '!public/css/html5reset.css'
       ]
-    
+
     phplint:
       options:
         limit: 10
@@ -19,39 +19,40 @@ module.exports = (grunt) ->
         stdout: true
         stderr: true
       files: [
-        'site/**/*.php'
-        'site/**/*.inc'
+        '**/*.php'
+        '!vendor/**/*'
+        '!node_modules/**/*'
       ]
-    
+
     coffeelint:
-      files: ['*.coffee']
-    
+      files: [
+        '*.coffee'
+      ]
+
     htmlhint:
       options:
         htmlhintrc: '.htmlhintrc'
       files: [
-        'site/index.inc'
-        'site/contents/*.inc'
+        'views/**/*.html'
       ]
-    
+
     jsonlint:
-      files: ['*.json', 'site/**/*.json']
-    
+      files: [
+        '**/*.json'
+        '!vendor/**/*'
+        '!node_modules/**/*'
+      ]
+
     bashlint:
-      ci: ['.ci/**/*.sh']
-      site: ['site/**/*.sh']
-      
+      ci: []
+
     jshint:
       options:
         jshintrc: true
-      
+
       files: [
-        'site/**/*.js'
-        '!site/html5.js'
-        '!site/ie7-squish.js'
-        '!site/IE8.js'
       ]
-    
+
     concurrent:
       options:
         logConcurrentOutput: false
@@ -63,10 +64,10 @@ module.exports = (grunt) ->
         'jsonlint'
         'jshint'
       ], !isWin && ['bashlint'])
-  
+
   grunt.registerTask 'lint', 'concurrent:lint'
   grunt.registerTask 'test', ['lint']
   grunt.registerTask 'default', []
-  
+
   require('load-grunt-tasks')(grunt)
   require('phplint').gruntPlugin(grunt)
