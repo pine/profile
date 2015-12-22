@@ -26,7 +26,7 @@ class LastModifiedExtension extends \Twig_Extension {
 
         if (file_exists($view_path)) {
             $result = exec("cd $work_tree && $git_cmd");
-		    return strtotime($result);
+            return strtotime($result);
         }
     }
 }
