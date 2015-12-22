@@ -289,7 +289,7 @@ body > section > footer {
 	width: 738px;
 	min-height: 80px;
 	line-height: 1.3;
-	background: url(img/html5.png) no-repeat 688px center !important; /* important: PIE での上書きを避けるため */
+	background: url(/img/html5.png) no-repeat 688px center !important; /* important: PIE での上書きを避けるため */
 	background-color: rgba(0, 0, 0, .65) !important; /* important: background の important を上書きするため */
 	color: white;
 	font-size: 13px;
