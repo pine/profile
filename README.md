@@ -16,4 +16,4 @@ $ make server
 
 ## License
 MIT License<br />
-Copyright (c) 2011-2012, 2014-2015 Pine Mizune
+Copyright (c) 2011-2012, 2014-2016 Pine Mizune
