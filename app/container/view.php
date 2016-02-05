@@ -9,7 +9,7 @@ $container['view'] = function ($c) use($routes) {
         'autoreload' => true,
     ]);
 
-	$view['php_version'] = PHP_VERSION;
+    $view['php_version'] = PHP_VERSION;
 
     $view->addExtension(new \Slim\Views\TwigExtension(
         $c['router'],
