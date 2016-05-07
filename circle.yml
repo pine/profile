@@ -9,8 +9,8 @@ test:
     - make lint
 
 deployment:
-  next:
+  master:
     branch: master
     commands:
-      - git fetch --unshallow
+      - git fetch --unshallow || true
       - git push -f ssh://56796a342d527194e200016a@profile-pinemz2.rhcloud.com/~/git/profile.git/ master:master
