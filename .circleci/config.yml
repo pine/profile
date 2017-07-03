@@ -14,7 +14,7 @@ jobs:
             java -version
       - run:
           name: Run build
-          command: ./sbt dist
+          command: cat /dev/null | ./sbt dist
       - save_cache:
           key: profile-website-{{ .Branch }}-{{ checksum "build.sbt" }}
           paths:
