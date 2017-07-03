@@ -1,4 +1,4 @@
-name := """play-scala-starter-example"""
+name := """profile-website"""
 
 version := "1.0-SNAPSHOT"
 
