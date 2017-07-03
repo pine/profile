@@ -1,0 +1,10 @@
+---
+applications:
+  - name: profile-website
+    random-route: true
+    memory: 512M
+    instances: 1
+    path: target/universal/profile-website-1.0-SNAPSHOT.zip
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
+    env:
+      JAVA_OPTS: -Dconfig.resource=application.conf -Xss349k

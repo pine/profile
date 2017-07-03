@@ -1,0 +1,12 @@
+@(key: String)
+@import models._
+
+<ul>
+  @for(page <- Page.values) {
+    @if(key == page.key) {
+      <li>@page.title</li>
+    } else {
+      <li><a href="@page.path">@page.title</a></li>
+    }
+  }
+</ul>

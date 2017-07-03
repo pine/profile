@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/workspace
+    docker:
+      - image: openjdk:8
+    steps:
+      - checkout
+      - restore_cache:
+          key: profile-website-{{ .Branch }}-{{ checksum "build.sbt" }}
+      - run:
+          name: System information
+          command: |
+            java -version
+      - run:
+          name: Run build
+          command: ./sbt dist
+      - save_cache:
+          key: profile-website-{{ .Branch }}-{{ checksum "build.sbt" }}
+          paths:
+            - ~/.ivy2
+            - ~/.sbt
+      - deploy:
+          name: Deploy to IBM Bluemix
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              apt-get update -qq
+              apt-get install -qq -y apt-transport-https
+              wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb http://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -qq -y cf-cli
+
+              cf -v
+              cf api https://api.au-syd.bluemix.net
+              cf login -u $BLUEMIX_USER -p $BLUEMIX_PASSWORD
+              cf push
+            fi
