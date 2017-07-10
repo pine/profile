@@ -34,5 +34,8 @@ jobs:
               cf -v
               cf api https://api.au-syd.bluemix.net
               cf login -u $BLUEMIX_USER -p $BLUEMIX_PASSWORD
-              cf push
+
+              for i in {1..3}; do
+                cf push && break
+              done
             fi
