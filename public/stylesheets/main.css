@@ -14,11 +14,11 @@ sub {
 }
 
 :lang(en) {
-	font-family: Calibri, Arial, sans-serif;
+	font-family: Calibri, Georgia, sans-serif;
 }
 
 :lang(ja) {
-	font-family: "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
+	font-family: "メイリオ", "ヒラギノ角ゴ ProN W3", sans-serif;
 }
 
 /* 黒背景用 リンク文字色 */
