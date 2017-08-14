@@ -11,10 +11,11 @@ object Page {
   case object Program extends Page("program", "/program", "プログラミング")
   case object Anime extends Page("anime", "/anime", "アニメ")
   case object LightNovel extends Page("light_novel", "/light_novel", "ライトノベル")
+  case object Mountain extends Page("mountain", "/mountain", "登山")
   case object Link extends Page("link", "/link", "リンク")
   case object SiteInfo extends Page("site_info", "/site_info", "サイト情報")
 
-  val values = Array(Index, Program, Anime, LightNovel, Link, SiteInfo)
+  val values = Array(Index, Program, Anime, LightNovel, Mountain, Link, SiteInfo)
 
   def of(key: String) = this.values.find(_.key == key)
 }

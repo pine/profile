@@ -6,6 +6,7 @@ GET     /                           controllers.StaticPageController.show(name="
 GET     /anime                      controllers.StaticPageController.show(name="anime")
 GET     /program                    controllers.StaticPageController.show(name="program")
 GET     /light_novel                controllers.StaticPageController.show(name="light_novel")
+GET     /mountain                   controllers.StaticPageController.show(name="mountain")
 GET     /link                       controllers.StaticPageController.show(name="link")
 GET     /site_info                  controllers.StaticPageController.show(name="site_info")
 
