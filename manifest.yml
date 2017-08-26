@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: profile-website
+  - name: Profile
     random-route: true
     memory: 512M
     instances: 1
