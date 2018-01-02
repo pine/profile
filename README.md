@@ -23,5 +23,8 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode)
 $ ./sbt run
 ```
 
+## Status
+- https://stats.pine.moe/
+
 ## License
 MIT &copy; Pine Mizune
