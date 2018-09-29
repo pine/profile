@@ -17,5 +17,5 @@ object Page {
 
   val values = Array(Index, Program, Anime, LightNovel, Mountain, Link, SiteInfo)
 
-  def of(key: String) = this.values.find(_.key == key)
+  def from(key: String) = this.values.find(_.key == key)
 }

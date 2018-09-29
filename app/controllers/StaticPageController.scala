@@ -8,7 +8,7 @@ import models._
 class StaticPageController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   def show(key: String) = Action {
-    Page.of(key) match {
+    Page.from(key) match {
       case Some(page) => {
         page match {
           case Page.Index => Ok(views.html.index())
