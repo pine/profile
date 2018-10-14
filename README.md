@@ -10,7 +10,7 @@ My profile website (Japanese)
 ## Dependencies
 
 - Scala 2.12.2
-- Play Framework 2.6.0
+- Play Framework 2.7.0
 
 ## Getting started
 
