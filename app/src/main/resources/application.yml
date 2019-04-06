@@ -1,0 +1,17 @@
+---
+
+spring:
+  profiles:
+    active: default
+  thymeleaf:
+    mode: HTML
+  output:
+    ansi:
+      enabled: always
+
+---
+
+spring:
+  profiles: default
+  include:
+    - anime
