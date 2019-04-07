@@ -12,7 +12,7 @@ public class BackgroundRepository {
     private final Random random;
 
     @VisibleForTesting
-    static String[] BACKGROUNDS =
+    final static String[] BACKGROUNDS =
         {
             "yun_1077.jpg",
             "yun_1375.jpg",
@@ -22,7 +22,7 @@ public class BackgroundRepository {
         };
 
     public String choose() {
-        int index = random.nextInt(BACKGROUNDS.length);
+        final int index = random.nextInt(BACKGROUNDS.length);
         return BACKGROUNDS[index];
     }
 }

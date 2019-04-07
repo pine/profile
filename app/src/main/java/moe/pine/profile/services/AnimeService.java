@@ -17,7 +17,7 @@ public class AnimeService {
     private final AnimeProperties animeProperties;
 
     public List<ViewAnimeGroup> getWatched() {
-        var watched = animeProperties.getWatched();
+        final var watched = animeProperties.getWatched();
 
         return watched.entrySet()
             .stream()
