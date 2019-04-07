@@ -8,6 +8,16 @@ spring:
   output:
     ansi:
       enabled: always
+  resources:
+    cache:
+      cachecontrol:
+        cache-public: true
+        max-age: 31536000 # 1 year
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
 
 ---
 

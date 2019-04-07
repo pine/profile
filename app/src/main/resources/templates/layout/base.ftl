@@ -1,4 +1,5 @@
 <#ftl strip_whitespace=true>
+<#import "/spring.ftl" as spring>
 <#import "functions.ftl" as functions>
 
 <#macro page layout>
@@ -6,11 +7,11 @@
   <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/html5reset.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="<@spring.url '/stylesheets/html5reset.css' />">
+    <link rel="stylesheet" href="<@spring.url '/stylesheets/main.css' />">
     <style>
       body {
-        background-image: url("/images/bg/${layout.background}")
+        background-image: url("<@spring.url '/images/bg/' + layout.background />")
       }
     </style>
     <title>${layout.siteTitle}: ${layout.pageTitle}</title>
