@@ -93,16 +93,6 @@ subprojects {
             html.enabled = true
         }
     }
-
-
-    // ----- Checkstyle -----------------------------------
-
-    apply plugin: 'checkstyle'
-
-    checkstyle {
-        toolVersion = '8.18'
-        configFile = file("${project.rootDir}/config/checkstyle.xml")
-    }
 }
 
 
