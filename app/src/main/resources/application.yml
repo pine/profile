@@ -2,7 +2,7 @@
 
 spring:
   profiles:
-    active: default
+    active: local
   thymeleaf:
     mode: HTML
   output:
@@ -11,6 +11,14 @@ spring:
 
 ---
 
-spring.profiles: default
+spring.profiles: local
 spring.profiles.include:
   - anime
+  - app
+
+---
+
+spring.profiles: prod
+spring.profiles.include:
+  - anime
+  - app
