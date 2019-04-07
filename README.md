@@ -14,12 +14,6 @@
 $ ./gradlew :app:bootRun
 ```
 
-## Supported services
-
-- Gravatar
-- Slack
-- Twitter
-
 ## Deployment
 
 ```sh
