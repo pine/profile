@@ -1,34 +1,42 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/workspace
     docker:
-      - image: pine613/java-cf-cli:openjdk8
+      - image: circleci/openjdk:11.0.2-jdk
+    working_directory: ~/repo
+    environment:
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+      YARN_SILENT: 1
     steps:
       - checkout
+      - run:
+          name: Checkout submodule
+          command: |
+            git submodule update --init
       - restore_cache:
-          key: profile-website-{{ .Branch }}-{{ checksum "build.sbt" }}
+          keys:
+            - v1-dependencies-{{ checksum "build.gradle" }}
+            - v1-dependencies-
       - run:
-          name: System information
+          name: Test
           command: |
-            java -version
+            ./gradlew check
       - run:
-          name: Run build
-          command: cat /dev/null | ./sbt dist
+          name: Build
+          command: |
+            ./gradlew clean :app:assemble
       - save_cache:
-          key: profile-website-{{ .Branch }}-{{ checksum "build.sbt" }}
           paths:
-            - ~/.ivy2
-            - ~/.sbt
-      - deploy:
-          name: Deploy to IBM Bluemix
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "build.gradle" }}
+      - run:
+          name: Deployment
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              cf -v
-              cf api https://api.au-syd.bluemix.net
-              cf login -u $BLUEMIX_USER -p $BLUEMIX_PASSWORD
-
-              for i in {1..3}; do
-                cf push && break
-              done
+            if [ "$CIRCLE_BRANCH" == "master" ]; then
+              ./.circleci/setup-heroku.sh
+              ./.circleci/setup-retry.sh
+              retry -- heroku plugins:install java
+              retry -- heroku deploy:jar \
+                --jar app/build/libs/app.jar --jdk 11 --app pinemz-profile-website
             fi

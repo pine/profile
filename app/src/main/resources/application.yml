@@ -1,0 +1,24 @@
+---
+
+spring:
+  profiles:
+    active: local
+  thymeleaf:
+    mode: HTML
+  output:
+    ansi:
+      enabled: always
+
+---
+
+spring.profiles: local
+spring.profiles.include:
+  - anime
+  - app
+
+---
+
+spring.profiles: prod
+spring.profiles.include:
+  - anime
+  - app
