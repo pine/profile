@@ -34,8 +34,8 @@ public class LayoutService {
                 .collect(Collectors.toList());
 
         return ViewLayout.builder()
-            .siteTitle(appProperties.getSiteTitle())
-            .siteTitleEn(appProperties.getSiteTitleEn())
+            .siteTitle(appProperties.getSite().getTitle())
+            .siteTitleEn(appProperties.getSite().getTitleEn())
             .background(backgroundRepository.choose())
             .pageTitle(page.getTitle())
             .pageTitleEn(page.getTitleEn())

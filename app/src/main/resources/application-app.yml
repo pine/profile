@@ -1,3 +1,6 @@
 app:
-  site-title: 水音氷音 (ぴね) プロフィール
-  site-title-en: Pine Profile
+  site:
+    title: 水音氷音 (ぴね) プロフィール
+    title-en: Pine Profile
+  page:
+    max-age: 180 # 3 min
