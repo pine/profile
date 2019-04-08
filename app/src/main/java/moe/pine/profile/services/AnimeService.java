@@ -26,7 +26,7 @@ public class AnimeService {
             .stream()
             .sorted(Comparator.comparing(Map.Entry::getKey))
             .map(v -> {
-                var items = v.getValue()
+                final var items = v.getValue()
                     .stream()
                     .map(ViewAnime::new)
                     .collect(Collectors.toList());
