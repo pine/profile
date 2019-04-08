@@ -13,6 +13,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 @Repository
 @Slf4j
 public class BackgroundRepository {
@@ -22,8 +24,8 @@ public class BackgroundRepository {
     @Nonnull
     private final ArrayList<String> backgrounds = Lists.newArrayList();
 
-    public BackgroundRepository(final Random random) {
-        this.random = random;
+    public BackgroundRepository(@Nonnull final Random random) {
+        this.random = checkNotNull(random);
 
         try {
             final var resolver = new PathMatchingResourcePatternResolver();
@@ -37,7 +39,7 @@ public class BackgroundRepository {
             log.debug("Found {} background images :: {}", filenames.size(), filenames);
 
             this.backgrounds.addAll(filenames);
-        } catch (IOException e) {
+        } catch (final IOException e) {
             throw new RuntimeException(e);
         }
     }
