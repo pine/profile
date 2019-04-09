@@ -9,7 +9,11 @@ dependencies {
 
     // Utilities
     implementation 'com.google.guava:guava'
-    implementation 'org.apache.commons:commons-lang3:3.8.1'
+    implementation 'org.apache.commons:commons-lang3'
+
+    // HTML Compressor
+    implementation 'com.googlecode.htmlcompressor:htmlcompressor'
+    implementation 'org.mozilla:rhino'
 
     compileOnly 'javax.servlet:javax.servlet-api'
 }

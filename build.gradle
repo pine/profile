@@ -49,6 +49,10 @@ subprojects {
             dependency 'org.apache.commons:commons-lang3:3.8.1'
             dependency 'org.apache.commons:commons-collections4:4.3'
 
+            // HTML Compressor
+            dependency 'com.googlecode.htmlcompressor:htmlcompressor:1.5.2'
+            dependency 'org.mozilla:rhino:1.7.10'
+
             // Test
             dependency 'junit:junit:4.12'
             dependency 'org.mockito:mockito-core:2.24.5'

@@ -1,5 +1,6 @@
 package moe.pine.profile.config;
 
+import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
 import moe.pine.profile.interceptors.CacheInterceptor;
 import moe.pine.profile.properties.AppProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -23,5 +24,14 @@ public class AppConfig {
     ) {
         final long maxAge = appProperties.getPage().getMaxAge();
         return new CacheInterceptor(maxAge);
+    }
+
+    @Bean
+    public HtmlCompressor htmlCompressor() {
+        final var htmlCompressor = new HtmlCompressor();
+        htmlCompressor.setRemoveQuotes(true);
+        htmlCompressor.setSimpleBooleanAttributes(true);
+
+        return htmlCompressor;
     }
 }
