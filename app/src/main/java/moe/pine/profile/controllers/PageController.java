@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import moe.pine.profile.models.Page;
 import moe.pine.profile.services.AnimeService;
 import moe.pine.profile.services.LayoutService;
+import moe.pine.profile.services.MountainService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +22,9 @@ public class PageController {
 
     @Nonnull
     private final LayoutService layoutService;
+
+    @Nonnull
+    private final MountainService mountainService;
 
     @GetMapping("/")
     public ModelAndView index() {
@@ -57,7 +61,11 @@ public class PageController {
     @GetMapping("/mountain")
     public ModelAndView mountain() {
         final var layout = layoutService.get(Page.MOUNTAIN);
-        final var params = ImmutableMap.of("layout", layout);
+        final var mountains = mountainService.getClimbed();
+        final var params = ImmutableMap.of(
+            "layout", layout,
+            "mountains", mountains
+        );
         return new ModelAndView("mountain", params);
     }
 
