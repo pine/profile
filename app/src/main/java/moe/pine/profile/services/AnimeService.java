@@ -29,9 +29,9 @@ public class AnimeService {
                 final var items = v.getValue()
                     .stream()
                     .map(ViewAnime::new)
-                    .collect(Collectors.toList());
+                    .collect(Collectors.toUnmodifiableList());
                 return new ViewAnimeGroup(v.getKey(), items);
             })
-            .collect(Collectors.toList());
+            .collect(Collectors.toUnmodifiableList());
     }
 }

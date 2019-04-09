@@ -31,7 +31,7 @@ public class LayoutService {
         final List<ViewPage> pages =
             Arrays.stream(Page.values())
                 .map(v -> new ViewPage(v, v == page))
-                .collect(Collectors.toList());
+                .collect(Collectors.toUnmodifiableList());
 
         return ViewLayout.builder()
             .siteTitle(appProperties.getSite().getTitle())
