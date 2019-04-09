@@ -1,15 +1,15 @@
 package moe.pine.profile.repositories;
 
-import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Nonnull;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -22,7 +22,7 @@ public class BackgroundRepository {
     private final Random random;
 
     @Nonnull
-    private final ArrayList<String> backgrounds = Lists.newArrayList();
+    private final List<String> backgrounds;
 
     public BackgroundRepository(@Nonnull final Random random) {
         this.random = checkNotNull(random);
@@ -34,16 +34,18 @@ public class BackgroundRepository {
             final var filenames =
                 Arrays.stream(resources)
                     .map(Resource::getFilename)
-                    .collect(Collectors.toList());
+                    .filter(StringUtils::isNotEmpty)
+                    .collect(Collectors.toUnmodifiableList());
 
             log.debug("Found {} background images :: {}", filenames.size(), filenames);
 
-            this.backgrounds.addAll(filenames);
+            this.backgrounds = filenames;
         } catch (final IOException e) {
             throw new RuntimeException(e);
         }
     }
 
+    @Nonnull
     public String choose() {
         final int index = random.nextInt(backgrounds.size());
         return backgrounds.get(index);
