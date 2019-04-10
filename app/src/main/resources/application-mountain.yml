@@ -3,3 +3,27 @@ mountain:
     - name: 高尾山
       height: 599
       climbed-at: 2017-06
+    - name: 榛名山
+      height: 1449
+      climbed-at: 2017-06
+    - name: '八ヶ岳: 赤岳, 阿弥陀岳'
+      height: 2899
+      climbed-at: 2017-07
+    - name: 大菩薩嶺
+      height: 2056
+      climbed-at: 2017-08
+    - name: 富士山
+      height: 3776
+      climbed-at: 2017-08
+    - name: 不忘山
+      height: 1705
+      climbed-at: 2018-06
+    - name: 富士山
+      height: 3776
+      climbed-at: 2018-07
+    - name: 於茂登岳
+      height: 525
+      climbed-at: 2019-03
+    - name: 韓国岳
+      height: 1700
+      climbed-at: 2019-03

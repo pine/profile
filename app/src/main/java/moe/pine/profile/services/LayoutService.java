@@ -24,6 +24,7 @@ public class LayoutService {
     @Nonnull
     private final BackgroundRepository backgroundRepository;
 
+    @Nonnull
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public ViewLayout get(@Nonnull final Page page) {
         checkNotNull(page);
