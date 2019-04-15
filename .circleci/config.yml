@@ -21,11 +21,11 @@ jobs:
       - run:
           name: Test
           command: |
-            ./gradlew check
+            ./gradlew clean check
       - run:
           name: Build
           command: |
-            ./gradlew clean :app:assemble
+            ./gradlew clean :app:bootJar
       - save_cache:
           paths:
             - ~/.gradle
