@@ -24,6 +24,7 @@ public class AnimeService {
 
         return watched.entrySet()
             .stream()
+            .filter(v -> !v.getValue().isEmpty())
             .sorted(Comparator.comparing(Map.Entry::getKey))
             .map(v -> {
                 final var items = v.getValue()
