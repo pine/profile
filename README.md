@@ -1,4 +1,4 @@
-## My Profile &nbsp;[![CircleCI](https://circleci.com/gh/pine/profile-website/tree/master.svg?style=shield)](https://circleci.com/gh/pine/profile-website/tree/master)
+## My Profile &nbsp;[![CircleCI](https://circleci.com/gh/pine/profile-website/tree/master.svg?style=shield)](https://circleci.com/gh/pine/profile-website/tree/master) [![codecov](https://codecov.io/gh/pine/profile-website/branch/master/graph/badge.svg)](https://codecov.io/gh/pine/profile-website)
 
 ## Requirements
 
