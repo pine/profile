@@ -21,7 +21,7 @@ allprojects {
     apply plugin: 'eclipse'
     apply plugin: 'idea'
 
-    group 'moe.pine.emotions'
+    group 'moe.pine.profile'
 
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
