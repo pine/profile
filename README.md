@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- JDK 11
+- JDK 11 or later
 
 ## Libraries
 
