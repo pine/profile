@@ -1,15 +1,15 @@
 package moe.pine.profile.controllers;
 
-import com.google.common.collect.ImmutableMap;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import moe.pine.profile.models.Page;
+import moe.pine.profile.models.PageAttributes;
 import moe.pine.profile.services.AnimeService;
 import moe.pine.profile.services.LayoutService;
 import moe.pine.profile.services.MountainService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Nonnull;
 
@@ -27,59 +27,55 @@ public class PageController {
     private final MountainService mountainService;
 
     @GetMapping("/")
-    public ModelAndView index() {
+    public String index(final Model model) {
         final var layout = layoutService.get(Page.INDEX);
-        final var params = ImmutableMap.of("layout", layout);
-        return new ModelAndView("index", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        return Page.INDEX.getTemplate();
     }
 
     @GetMapping("/anime")
-    public ModelAndView anime() {
+    public String anime(final Model model) {
         final var layout = layoutService.get(Page.ANIME);
         final var animeGroups = animeService.getWatched();
-        final var params = ImmutableMap.of(
-            "layout", layout,
-            "animeGroups", animeGroups
-        );
-        return new ModelAndView("anime", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        model.addAttribute(PageAttributes.ANIME_GROUPS, animeGroups);
+        return Page.ANIME.getTemplate();
     }
 
     @GetMapping("/light_novel")
-    public ModelAndView lightNovel() {
+    public String lightNovel(final Model model) {
         final var layout = layoutService.get(Page.LIGHT_NOVEL);
-        final var params = ImmutableMap.of("layout", layout);
-        return new ModelAndView("light_novel", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        return Page.LIGHT_NOVEL.getTemplate();
     }
 
     @GetMapping("/link")
-    public ModelAndView link() {
+    public String link(final Model model) {
         final var layout = layoutService.get(Page.LINK);
-        final var params = ImmutableMap.of("layout", layout);
-        return new ModelAndView("link", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        return Page.LINK.getTemplate();
     }
 
     @GetMapping("/mountain")
-    public ModelAndView mountain() {
+    public String mountain(final Model model) {
         final var layout = layoutService.get(Page.MOUNTAIN);
         final var mountains = mountainService.getClimbed();
-        final var params = ImmutableMap.of(
-            "layout", layout,
-            "mountains", mountains
-        );
-        return new ModelAndView("mountain", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        model.addAttribute(PageAttributes.MOUNTAINS, mountains);
+        return Page.MOUNTAIN.getTemplate();
     }
 
     @GetMapping("/program")
-    public ModelAndView program() {
+    public String program(final Model model) {
         final var layout = layoutService.get(Page.PROGRAM);
-        final var params = ImmutableMap.of("layout", layout);
-        return new ModelAndView("program", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        return Page.PROGRAM.getTemplate();
     }
 
     @GetMapping("/site_info")
-    public ModelAndView siteInfo() {
+    public String siteInfo(final Model model) {
         final var layout = layoutService.get(Page.SITE_INFO);
-        final var params = ImmutableMap.of("layout", layout);
-        return new ModelAndView("site_info", params);
+        model.addAttribute(PageAttributes.LAYOUT, layout);
+        return Page.SITE_INFO.getTemplate();
     }
 }

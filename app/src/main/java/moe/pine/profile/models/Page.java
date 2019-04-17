@@ -5,14 +5,17 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public enum Page {
-    INDEX("/", "トップページ", "Top Page"),
-    PROGRAM("/program", "プログラミング", "Programming"),
-    ANIME("/anime", "アニメ", "Anime"),
-    LIGHT_NOVEL("/light_novel", "ライトノベル", "Light novel"),
-    MOUNTAIN("/mountain", "登山", "Mountain"),
-    LINK("/link", "リンク", "Link"),
-    SITE_INFO("/site_info", "サイト情報", "Site information"),
+    INDEX("index", "/", "トップページ", "Top Page"),
+    PROGRAM("program", "/program", "プログラミング", "Programming"),
+    ANIME("anime", "/anime", "アニメ", "Anime"),
+    LIGHT_NOVEL("light_novel", "/light_novel", "ライトノベル", "Light novel"),
+    MOUNTAIN("mountain", "/mountain", "登山", "Mountain"),
+    LINK("link", "/link", "リンク", "Link"),
+    SITE_INFO("site_info", "/site_info", "サイト情報", "Site information"),
     ;
+
+    @Getter
+    private final String template;
 
     @Getter
     private final String path;
