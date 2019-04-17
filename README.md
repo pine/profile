@@ -15,6 +15,7 @@ $ ./gradlew :app:bootRun
 ```
 
 ## Deployment
+[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) is required.
 
 ```sh
 $ ./gradlew clean :app:bootJar
