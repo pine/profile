@@ -29,4 +29,12 @@ public class PageControllerTest {
             .andExpect(status().isOk())
             .andExpect(content().string(containsString(Page.INDEX.getTitle())));
     }
+
+    @Test
+    @SneakyThrows
+    public void animeTest() {
+        mvc.perform(MockMvcRequestBuilders.get("/anime"))
+            .andExpect(status().isOk())
+            .andExpect(content().string(containsString(Page.ANIME.getTitle())));
+    }
 }
