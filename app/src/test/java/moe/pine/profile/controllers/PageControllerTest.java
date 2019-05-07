@@ -37,4 +37,12 @@ public class PageControllerTest {
             .andExpect(status().isOk())
             .andExpect(content().string(containsString(Page.ANIME.getTitle())));
     }
+
+    @Test
+    @SneakyThrows
+    public void mountainTest() {
+        mvc.perform(MockMvcRequestBuilders.get("/mountain"))
+            .andExpect(status().isOk())
+            .andExpect(content().string(containsString(Page.MOUNTAIN.getTitle())));
+    }
 }
