@@ -4,9 +4,9 @@
   <ul>
     <#list pages as page>
       <#if page.active>
-        <li>${page.title}</li>
+        <li>${page.title?html}</li>
       <#else>
-        <li><a href="${page.path}">${page.title}</a></li>
+        <li><a href="${page.path?html}">${page.title?html}</a></li>
       </#if>
     </#list>
   </ul>

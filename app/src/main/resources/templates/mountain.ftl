@@ -15,7 +15,7 @@
     <p>頂上まで登った山の一覧です。</p>
     <ul>
       <#list mountains as mountain>
-        <li>${mountain.climbedAt} ${mountain.name} (${mountain.height})</li>
+        <li>${mountain.climbedAt?html} ${mountain.name?html} (${mountain.height?html})</li>
       </#list>
     </ul>
   </section>

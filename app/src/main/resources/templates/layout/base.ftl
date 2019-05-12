@@ -14,7 +14,7 @@
         background-image: url("<@spring.url '/images/bg/' + layout.background />")
       }
     </style>
-    <title>${layout.siteTitle}: ${layout.pageTitle}</title>
+    <title>${layout.siteTitle?html}: ${layout.pageTitle?html}</title>
   </head>
 
   <body>
@@ -22,8 +22,8 @@
 
     <header>
       <a href="/">
-        <h1 lang="en">${layout.siteTitleEn}</h1>
-        <p>${layout.siteTitle}</p>
+        <h1 lang="en">${layout.siteTitleEn?html}</h1>
+        <p>${layout.siteTitle?html}</p>
       </a>
     </header>
 
@@ -38,8 +38,8 @@
 
       <article>
         <header>
-          <h2 lang="en">${layout.pageTitleEn}</h2>
-          <p>${layout.pageTitle}</p>
+          <h2 lang="en">${layout.pageTitleEn?html}</h2>
+          <p>${layout.pageTitle?html}</p>
         </header>
         <#nested />
       </article>

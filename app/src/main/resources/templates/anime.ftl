@@ -19,10 +19,10 @@
     <ul>
       <#list animeGroups as animeGroup>
         <li>
-          ${animeGroup.name}
+          ${animeGroup.name?html}
           <ul>
             <#list animeGroup.items as anime>
-              <li>${anime.name}</li>
+              <li>${anime.name?html}</li>
             </#list>
           </ul>
         </li>
