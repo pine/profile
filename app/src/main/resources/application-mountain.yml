@@ -15,6 +15,12 @@ mountain:
     - name: 富士山
       height: 3776
       climbed-at: 2017-08
+    - name: 筑波山
+      height: 877
+      climbed-at: 2018-04
+    - name: 塔ノ岳
+      height: 1491
+      climbed-at: 2018-05
     - name: 不忘山
       height: 1705
       climbed-at: 2018-06
