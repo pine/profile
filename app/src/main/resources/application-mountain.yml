@@ -39,4 +39,7 @@ mountain:
     - name: 甲州高尾山
       height: 1106
       climbed-at: 2019-06
+    - name: '大雪山: 旭岳'
+      height: 2291
+      climbed-at: 2019-06
 
