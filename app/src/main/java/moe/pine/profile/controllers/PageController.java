@@ -11,19 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.annotation.Nonnull;
-
 @Controller
 @RequiredArgsConstructor
 @Slf4j
 public class PageController {
-    @Nonnull
     private final AnimeService animeService;
-
-    @Nonnull
     private final LayoutService layoutService;
-
-    @Nonnull
     private final MountainService mountainService;
 
     @GetMapping("/")
