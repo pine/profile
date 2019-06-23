@@ -1,8 +1,7 @@
 package moe.pine.profile.config;
 
 import lombok.RequiredArgsConstructor;
-import moe.pine.profile.interceptors.CacheInterceptor;
-import moe.pine.profile.interceptors.NoCacheInterceptor;
+import moe.pine.spring.cache.interceptors.CacheInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -11,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @RequiredArgsConstructor
 public class WebMvcConfig implements WebMvcConfigurer {
     private final CacheInterceptor cacheInterceptor;
-    private final NoCacheInterceptor noCacheInterceptor;
+    private final CacheInterceptor noCacheInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

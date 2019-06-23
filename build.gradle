@@ -67,6 +67,9 @@ subprojects {
             // HTML Compressor
             dependency 'com.googlecode.htmlcompressor:htmlcompressor:1.5.2'
             dependency 'org.mozilla:rhino:1.7.10'
+            
+            // Utilities
+            dependency 'moe.pine:spring-cache-interceptors:0.1.1'
 
             // Test
             dependency 'junit:junit:4.12'
