@@ -18,6 +18,12 @@ mountain:
     - name: 筑波山
       height: 877
       climbed-at: 2018-04
+    - name: 大岳山
+      height: 1266
+      climbed-at: 2018-04
+    - name: 御岳山
+      height: 929
+      climbed-at: 2018-04
     - name: 塔ノ岳
       height: 1491
       climbed-at: 2018-05
