@@ -8,14 +8,14 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Nonnull;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 
 @Repository
@@ -24,19 +24,16 @@ public class BackgroundRepository {
     @VisibleForTesting
     static String LOCATION_PATTERN = "classpath:/static/images/bg/*.jpg";
 
-    @Nonnull
     private final Random random;
-
-    @Nonnull
     private final List<String> backgrounds;
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public BackgroundRepository(
-        @Nonnull final ResourcePatternResolver resolver,
-        @Nonnull final Random random
+        final ResourcePatternResolver resolver,
+        final Random random
     ) {
-        checkNotNull(resolver);
-        this.random = checkNotNull(random);
+        Objects.requireNonNull(resolver);
+        this.random = Objects.requireNonNull(random);
 
         try {
             final var resources =
@@ -59,11 +56,10 @@ public class BackgroundRepository {
             }
             this.backgrounds = filenames;
         } catch (final IOException e) {
-            throw new RuntimeException(e);
+            throw new UncheckedIOException(e);
         }
     }
 
-    @Nonnull
     public String choose() {
         checkState(CollectionUtils.isNotEmpty(backgrounds));
 
