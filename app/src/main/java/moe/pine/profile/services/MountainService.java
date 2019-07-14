@@ -5,7 +5,6 @@ import moe.pine.profile.properties.MountainProperties;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Nonnull;
 import java.text.NumberFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -13,13 +12,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class MountainService {
-    @Nonnull
     private final MountainProperties mountainProperties;
-
-    @Nonnull
     private final NumberFormat numberFormat;
-
-    @Nonnull
     private final DateTimeFormatter dateTimeFormatter;
 
     public MountainService(
@@ -32,7 +26,6 @@ public class MountainService {
         this.dateTimeFormatter = dateTimeFormatter;
     }
 
-    @Nonnull
     public List<ViewMountain> getClimbed() {
         final var climbed = mountainProperties.getClimbed();
         return climbed.stream()

@@ -8,25 +8,20 @@ import moe.pine.profile.properties.AppProperties;
 import moe.pine.profile.repositories.BackgroundRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Nonnull;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-@RequiredArgsConstructor
 @Service
+@RequiredArgsConstructor
 public class LayoutService {
-    @Nonnull
     private final AppProperties appProperties;
-
-    @Nonnull
     private final BackgroundRepository backgroundRepository;
 
-    @Nonnull
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public ViewLayout get(@Nonnull final Page page) {
+    public ViewLayout get(final Page page) {
         checkNotNull(page);
 
         final List<ViewPage> pages =
