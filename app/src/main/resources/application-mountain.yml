@@ -48,4 +48,12 @@ mountain:
     - name: '大雪山: 旭岳'
       height: 2291
       climbed-at: 2019-06
-
+    - name: 高尾山
+      height: 599
+      climbed-at: 2019-07
+    - name: '八ヶ岳: 北横岳'
+      height: 2480
+      climbed-at: 2019-07
+    - name: 富士山
+      height: 3776
+      climbed-at: 2019-07
