@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.4.RELEASE'
+        springBootVersion = '2.1.7.RELEASE'
         lombokVersion = '1.18.6'
     }
     repositories {
@@ -67,7 +67,7 @@ subprojects {
             // HTML Compressor
             dependency 'com.googlecode.htmlcompressor:htmlcompressor:1.5.2'
             dependency 'org.mozilla:rhino:1.7.10'
-            
+
             // Utilities
             dependency 'moe.pine:spring-cache-interceptors:0.1.1'
 
@@ -125,7 +125,7 @@ task jacocoMerge(type: JacocoMerge) {
     mustRunAfter(subprojects.jacocoTestReport.mustRunAfter)
     destinationFile = file("${buildDir}/jacoco/test.exec")
     executionData = files(subprojects.jacocoTestReport.executionData)
-        .filter { f -> f.exists() }
+            .filter { f -> f.exists() }
 }
 
 jacocoTestReport {
@@ -148,8 +148,8 @@ apply plugin: 'build-time-tracker'
 buildtimetracker {
     reporters {
         summary {
-          ordered true
-          barstyle 'ascii'
+            ordered true
+            barstyle 'ascii'
         }
     }
 }
