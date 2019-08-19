@@ -48,6 +48,9 @@ mountain:
     - name: '大雪山: 旭岳'
       height: 2291
       climbed-at: 2019-06
+    - name: 入笠山
+      height: 1955
+      climbed-at: 2019-07
     - name: 高尾山
       height: 599
       climbed-at: 2019-07
@@ -57,3 +60,6 @@ mountain:
     - name: 富士山
       height: 3776
       climbed-at: 2019-07
+    - name: 御嶽山
+      height: 3067
+      climbed-at: 2019-08
