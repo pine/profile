@@ -4,21 +4,26 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.YearMonth;
 import java.util.List;
 
 @Data
+@Validated
 @ConfigurationProperties("mountain")
 public class MountainProperties {
-    private List<Mountain> climbed;
+    private @NotNull List<Mountain> climbed;
 
     @Data
+    @Validated
     @NoArgsConstructor
     @AllArgsConstructor
     public static class Mountain {
-        private String name;
-        private int height;
-        private YearMonth climbedAt;
+        private @NotEmpty String name;
+        private @NotNull Integer height;
+        private @NotNull YearMonth climbedAt;
     }
 }
