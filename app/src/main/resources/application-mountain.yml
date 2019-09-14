@@ -63,3 +63,7 @@ mountain:
     - name: 御嶽山
       height: 3067
       climbed-at: 2019-08
+    - name: 燕岳
+      height: 2763
+      climbed-at: 2019-09
+
