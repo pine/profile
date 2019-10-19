@@ -3,8 +3,8 @@
 spring:
   profiles:
     active: local
-  thymeleaf:
-    mode: HTML
+  freemarker:
+    prefer-file-system-access: false
   output:
     ansi:
       enabled: always

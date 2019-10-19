@@ -1,6 +1,6 @@
 <#ftl strip_whitespace=true>
 <#import "/spring.ftl" as spring>
-<#import "functions.ftl" as functions>
+<#import "functions.ftlh" as functions>
 
 <#macro page layout>
   <!DOCTYPE html>
@@ -14,7 +14,7 @@
         background-image: url("<@spring.url '/images/bg/' + layout.background />")
       }
     </style>
-    <title>${layout.siteTitle?html}: ${layout.pageTitle?html}</title>
+    <title>${layout.siteTitle}: ${layout.pageTitle}</title>
   </head>
 
   <body>
@@ -22,8 +22,8 @@
 
     <header>
       <a href="/">
-        <h1 lang="en">${layout.siteTitleEn?html}</h1>
-        <p>${layout.siteTitle?html}</p>
+        <h1 lang="en">${layout.siteTitleEn}</h1>
+        <p>${layout.siteTitle}</p>
       </a>
     </header>
 
@@ -33,15 +33,15 @@
           <h2 lang="en">Menu</h2>
           <p>メニュー</p>
         </header>
-        <@functions.menu pages=layout.pages />
+          <@functions.menu pages=layout.pages />
       </nav>
 
       <article>
         <header>
-          <h2 lang="en">${layout.pageTitleEn?html}</h2>
-          <p>${layout.pageTitle?html}</p>
+          <h2 lang="en">${layout.pageTitleEn}</h2>
+          <p>${layout.pageTitle}</p>
         </header>
-        <#nested />
+          <#nested />
       </article>
     </div>
 

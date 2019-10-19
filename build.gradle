@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.8.RELEASE'
+        springBootVersion = '2.2.0.RELEASE'
         lombokVersion = '1.18.6'
     }
     repositories {
@@ -69,7 +69,7 @@ subprojects {
             dependency 'org.mozilla:rhino:1.7.10'
 
             // Utilities
-            dependency 'moe.pine:spring-cache-interceptors:0.1.1'
+            dependency 'moe.pine:spring-cache-interceptors:0.1.2'
 
             // Test
             dependency 'junit:junit:4.12'

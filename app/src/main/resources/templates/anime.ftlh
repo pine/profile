@@ -2,10 +2,9 @@
 <#-- @ftlvariable name="layout" type="moe.pine.profile.models.ViewLayout" -->
 <#-- @ftlvariable name="animeGroups" type="java.util.List<moe.pine.profile.models.ViewAnimeGroup>" -->
 
-<#import "layout/base.ftl" as base>
+<#import "layout/base.ftlh" as base>
 
 <@base.page layout=layout>
-
   <section>
     <h3>アニメ全般</h3>
     <p>一般向けアニメも見ますが、深夜アニメが中心になります。</p>
@@ -17,16 +16,16 @@
     <p>最後まで視聴したもののみ。</p>
 
     <ul>
-      <#list animeGroups as animeGroup>
-        <li>
-          ${animeGroup.name?html}
-          <ul>
-            <#list animeGroup.items as anime>
-              <li>${anime.name?html}</li>
-            </#list>
-          </ul>
-        </li>
-      </#list>
+        <#list animeGroups as animeGroup>
+          <li>
+              ${animeGroup.name}
+            <ul>
+                <#list animeGroup.items as anime>
+                  <li>${anime.name}</li>
+                </#list>
+            </ul>
+          </li>
+        </#list>
     </ul>
   </section>
 </@base.page>
