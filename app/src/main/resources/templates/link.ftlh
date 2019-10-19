@@ -1,7 +1,7 @@
 <#ftl strip_whitespace=true>
 <#-- @ftlvariable name="layout" type="moe.pine.profile.models.ViewLayout" -->
 
-<#import "layout/base.ftl" as base>
+<#import "layout/base.ftlh" as base>
 
 <@base.page layout=layout>
   <section>
