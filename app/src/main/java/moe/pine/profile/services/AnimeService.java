@@ -6,7 +6,6 @@ import moe.pine.profile.models.ViewAnimeGroup;
 import moe.pine.profile.properties.AnimeProperties;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -22,7 +21,7 @@ public class AnimeService {
         return watched.entrySet()
             .stream()
             .filter(v -> !v.getValue().isEmpty())
-            .sorted(Comparator.comparing(Map.Entry::getKey))
+            .sorted(Map.Entry.comparingByKey())
             .map(v -> {
                 final var items = v.getValue()
                     .stream()
