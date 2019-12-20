@@ -21,6 +21,9 @@
     <logger name="io.undertow.websockets.jsr" level="ERROR"/>
     <logger name="io.undertow.request.security" level="WARN"/>
 
+    <!-- Jetty -->
+    <logger name="org.eclipse.jetty" level="INFO"/>
+
     <root>
         <level value="DEBUG"/>
         <appender-ref ref="CONSOLE"/>
