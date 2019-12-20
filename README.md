@@ -24,7 +24,7 @@ $ heroku apps:create your-app
 $ heroku plugins:install java
 $ heroku config:set SPRING_PROFILES_ACTIVE=prod
 $ heroku config:set TZ=Asia/Tokyo
-$ heroku config:set 'JAVA_OPTS=-verbose:gc -Xlog:gc* -XX:+UseStringDeduplication'
+$ heroku config:set 'JAVA_OPTS=-verbose:gc -Xlog:gc* -XX:+UseStringDeduplication -XX:-OmitStackTraceInFastThrow'
 $ heroku deploy:jar --jar app/build/libs/app.jar --jdk 11 --app your-app
 ```
 
