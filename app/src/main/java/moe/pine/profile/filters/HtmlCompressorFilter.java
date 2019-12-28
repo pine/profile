@@ -36,7 +36,7 @@ public class HtmlCompressorFilter implements Filter {
         chain.doFilter(request, wrappedResponse);
 
         final String contentType = wrappedResponse.getContentType();
-        if (contentType.startsWith("text/html")) {
+        if (contentType != null && contentType.startsWith("text/html")) {
             final String content = wrappedResponse.getContent();
             final String compressedContent = htmlCompressor.compress(content);
             response.getWriter().write(compressedContent);
