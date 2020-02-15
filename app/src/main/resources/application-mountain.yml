@@ -72,3 +72,6 @@ mountain:
     - name: '八ヶ岳: 硫黄岳'
       height: 2760
       climbed-at: 2019-12
+    - name: 谷川岳
+      height: 1977
+      climbed-at: 2020-02
