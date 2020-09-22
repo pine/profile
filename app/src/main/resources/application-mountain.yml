@@ -75,3 +75,6 @@ mountain:
     - name: 谷川岳
       height: 1977
       climbed-at: 2020-02
+    - name: 比叡山
+      height: 848
+      climbed-at: 2020-09
