@@ -75,6 +75,21 @@ mountain:
     - name: 谷川岳
       height: 1977
       climbed-at: 2020-02
+    - name: 高尾山
+      height: 599
+      climbed-at: 2020-08
     - name: 比叡山
       height: 848
       climbed-at: 2020-09
+    - name: 高尾山
+      height: 599
+      climbed-at: 2020-12
+    - name: 大菩薩峠
+      height: 1897
+      climbed-at: 2021-01
+    - name: 筑波山
+      height: 877
+      climbed-at: 2021-01
+    - name: 大山 (神奈川県)
+      height: 1252
+      climbed-at: 2021-02
