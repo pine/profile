@@ -93,3 +93,7 @@ mountain:
     - name: 大山 (神奈川県)
       height: 1252
       climbed-at: 2021-02
+    - name: 鋸山
+      height: 329
+      climbed-at: 2021-03
+
