@@ -6,7 +6,7 @@
 
 ## Libraries
 
-- Spring Boot 2.2
+- Spring Boot 2
 
 ## Getting started
 
