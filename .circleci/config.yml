@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Deployment
           command: |
-            if [ "$CIRCLE_BRANCH" == "master" ]; then
+            if [ "$CIRCLE_BRANCH" == "main" ]; then
               ./.circleci/setup-heroku.sh
               ./.circleci/setup-retry.sh
               retry -- heroku plugins:install java
