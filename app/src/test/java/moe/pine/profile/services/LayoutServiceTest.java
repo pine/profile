@@ -5,27 +5,21 @@ import moe.pine.profile.models.ViewLayout;
 import moe.pine.profile.models.ViewPage;
 import moe.pine.profile.properties.AppProperties;
 import moe.pine.profile.repositories.BackgroundRepository;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-public class LayoutServiceTest {
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
-
-    @Rule
-    public MockitoRule mockitoRule = MockitoJUnit.rule();
-
+@ExtendWith(MockitoExtension.class)
+class LayoutServiceTest {
     @Mock
     private AppProperties appProperties;
 
@@ -36,7 +30,7 @@ public class LayoutServiceTest {
     private LayoutService layoutService;
 
     @Test
-    public void getTest() {
+    void getTest() {
         when(appProperties.getSite())
             .thenReturn(new AppProperties.Site("siteTitle", "siteTitleEn"));
         when(backgroundRepository.choose())
@@ -56,10 +50,9 @@ public class LayoutServiceTest {
     }
 
     @Test
-    public void getTest_null() {
-        expectedException.expect(NullPointerException.class);
-
-        //noinspection ConstantConditions
-        layoutService.get(null);
+    @SuppressWarnings("ConstantConditions")
+    void getTest_null() {
+        assertThatThrownBy(() -> layoutService.get(null))
+            .isInstanceOf(NullPointerException.class);
     }
 }

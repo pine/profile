@@ -36,6 +36,9 @@ allprojects {
         options.compilerArgs << '-Xlint:deprecation'
     }
 
+    test {
+        useJUnitPlatform()
+    }
 
     // ----- JaCoCo ---------------------------------------
 
@@ -72,8 +75,6 @@ subprojects {
             dependency 'moe.pine:spring-cache-interceptors:0.2.0'
 
             // Test
-            dependency 'junit:junit:4.12'
-            dependency 'org.mockito:mockito-core:2.24.5'
             dependency 'org.powermock:powermock-reflect:2.0.0'
         }
     }
@@ -83,16 +84,6 @@ subprojects {
         compileOnly 'org.projectlombok:lombok'
         testAnnotationProcessor 'org.projectlombok:lombok'
         testCompileOnly 'org.projectlombok:lombok'
-
-        // Utilities
-        implementation 'com.google.guava:guava'
-        implementation 'org.apache.commons:commons-lang3'
-        implementation 'org.apache.commons:commons-collections4'
-
-        // Test
-        testImplementation 'junit:junit'
-        testImplementation 'org.mockito:mockito-core'
-        testImplementation 'org.powermock:powermock-reflect'
     }
 
 

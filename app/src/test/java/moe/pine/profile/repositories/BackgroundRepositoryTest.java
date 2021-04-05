@@ -1,13 +1,10 @@
 package moe.pine.profile.repositories;
 
 import com.google.common.collect.ImmutableList;
-import lombok.SneakyThrows;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.powermock.reflect.Whitebox;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -16,18 +13,14 @@ import java.util.List;
 import java.util.Random;
 
 import static moe.pine.profile.repositories.BackgroundRepository.LOCATION_PATTERN;
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class BackgroundRepositoryTest {
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
-
-    @Rule
-    public MockitoRule mockitoRule = MockitoJUnit.rule();
-
+@ExtendWith(MockitoExtension.class)
+class BackgroundRepositoryTest {
     @Mock
     private ResourcePatternResolver resolver;
 
@@ -35,7 +28,7 @@ public class BackgroundRepositoryTest {
     private Random random;
 
     @Test
-    public void constructorTest() throws Exception {
+    void constructorTest() throws Exception {
         final Resource resource1 = mock(Resource.class);
         when(resource1.getFilename()).thenReturn("resource1.jpg");
 
@@ -65,33 +58,30 @@ public class BackgroundRepositoryTest {
     }
 
     @Test
-    @SneakyThrows
-    public void constructorTest_noImages() {
-        expectedException.expect(IllegalStateException.class);
-        expectedException.expectMessage(
-            "Background image not found :: location-pattern=" + LOCATION_PATTERN);
-
+    void constructorTest_noImages() throws Exception {
         when(resolver.getResources(anyString())).thenReturn(new Resource[0]);
-        new BackgroundRepository(resolver, random);
+
+        assertThatThrownBy(() -> new BackgroundRepository(resolver, random))
+            .isInstanceOf(IllegalStateException.class)
+            .hasMessage("Background image not found :: location-pattern=" + LOCATION_PATTERN);
     }
 
+    @Test
     @SuppressWarnings("ConstantConditions")
-    @Test
-    public void constructorTest_nullResolver() {
-        expectedException.expect(NullPointerException.class);
-        new BackgroundRepository(null, random);
+    void constructorTest_nullResolver() {
+        assertThatThrownBy(() -> new BackgroundRepository(null, random))
+            .isInstanceOf(NullPointerException.class);
     }
 
+    @Test
     @SuppressWarnings("ConstantConditions")
-    @Test
-    public void constructorTest_nullRandom() {
-        expectedException.expect(NullPointerException.class);
-        new BackgroundRepository(resolver, null);
+    void constructorTest_nullRandom() {
+        assertThatThrownBy(() -> new BackgroundRepository(resolver, null))
+            .isInstanceOf(NullPointerException.class);
     }
 
     @Test
-    @SneakyThrows
-    public void chooseTest() {
+    void chooseTest() throws Exception {
         final Resource resource1 = mock(Resource.class);
         when(resource1.getFilename()).thenReturn("resource1.jpg");
 

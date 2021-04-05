@@ -1,18 +1,15 @@
 package moe.pine.profile.models;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
 
-public class ViewPageTest {
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+class ViewPageTest {
     @Test
-    public void constructorTest() {
+    void constructorTest() {
         final Page page = Page.INDEX;
         final ViewPage viewPage = new ViewPage(page, true);
 
@@ -22,10 +19,10 @@ public class ViewPageTest {
         assertTrue(viewPage.isActive());
     }
 
-    @SuppressWarnings("ConstantConditions")
     @Test
-    public void constructorTest_null() {
-        expectedException.expect(NullPointerException.class);
-        new ViewPage(null, true);
+    @SuppressWarnings("ConstantConditions")
+    void constructorTest_null() {
+        assertThatThrownBy(() -> new ViewPage(null, true))
+            .isInstanceOf(NullPointerException.class);
     }
 }

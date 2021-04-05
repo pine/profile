@@ -5,25 +5,22 @@ import com.google.common.collect.ImmutableMap;
 import moe.pine.profile.models.ViewAnime;
 import moe.pine.profile.models.ViewAnimeGroup;
 import moe.pine.profile.properties.AnimeProperties;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-public class AnimeServiceTest {
-    @Rule
-    public MockitoRule mockitoRule = MockitoJUnit.rule();
-
+@ExtendWith(MockitoExtension.class)
+class AnimeServiceTest {
     @Mock
     private AnimeProperties animeProperties;
 
@@ -31,7 +28,7 @@ public class AnimeServiceTest {
     private AnimeService animeService;
 
     @Test
-    public void getWatchedTest() {
+    void getWatchedTest() {
         final Map<String, List<String>> animes =
             ImmutableMap.of(
                 "2018", ImmutableList.of("minamike", "madomagi"),
@@ -57,7 +54,6 @@ public class AnimeServiceTest {
 
         assertEquals(expected, actual);
 
-        //noinspection ResultOfMethodCallIgnored
         verify(animeProperties).getWatched();
     }
 }
