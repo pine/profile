@@ -63,7 +63,7 @@
         <small>Recommended Browsers: Firefox 3.5+, Google Chrome 7+, Opera 10.5+, Safari 5+</small>
       </p>
       <p>
-        <small>Copyright &copy; 2011-2012, 2014-2019 <strong lang="ja">水音氷音 (ぴね)</strong>. All Rights Reserved.</small>
+        <small>Copyright &copy; 2011-2012, 2014-2021 <strong lang="ja">水音氷音 (ぴね)</strong>. All Rights Reserved.</small>
       </p>
     </footer>
 
