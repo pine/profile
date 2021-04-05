@@ -84,10 +84,6 @@ subprojects {
         testAnnotationProcessor 'org.projectlombok:lombok'
         testCompileOnly 'org.projectlombok:lombok'
 
-        // Logging
-        implementation 'org.slf4j:slf4j-api'
-        implementation 'ch.qos.logback:logback-classic'
-
         // Utilities
         implementation 'com.google.guava:guava'
         implementation 'org.apache.commons:commons-lang3'
