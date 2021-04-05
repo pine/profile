@@ -1,6 +1,5 @@
 package moe.pine.profile.repositories;
 
-import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -48,7 +47,7 @@ class BackgroundRepositoryTest {
         final var backgroundRepository = new BackgroundRepository(resolver, random);
 
         final List<String> expected =
-            ImmutableList.of(
+            List.of(
                 "resource1.jpg",
                 "resource2.jpg"
             );

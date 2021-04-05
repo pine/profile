@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
+@SuppressWarnings({"unused", "NotNullFieldNotInitialized"})
 class AppTest {
     @Autowired
     private App app;

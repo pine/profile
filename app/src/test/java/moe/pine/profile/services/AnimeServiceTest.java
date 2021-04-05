@@ -1,7 +1,5 @@
 package moe.pine.profile.services;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import moe.pine.profile.models.ViewAnime;
 import moe.pine.profile.models.ViewAnimeGroup;
 import moe.pine.profile.properties.AnimeProperties;
@@ -11,7 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -30,23 +27,23 @@ class AnimeServiceTest {
     @Test
     void getWatchedTest() {
         final Map<String, List<String>> animes =
-            ImmutableMap.of(
-                "2018", ImmutableList.of("minamike", "madomagi"),
-                "2019", ImmutableList.of("wataten"),
-                "2020", Collections.emptyList()
+            Map.of(
+                "2018", List.of("minamike", "madomagi"),
+                "2019", List.of("wataten"),
+                "2020", List.of()
             );
 
         when(animeProperties.getWatched()).thenReturn(animes);
 
         final List<ViewAnimeGroup> expected =
-            ImmutableList.of(
+            List.of(
                 new ViewAnimeGroup("2018",
-                    ImmutableList.of(
+                    List.of(
                         new ViewAnime("minamike"),
                         new ViewAnime("madomagi")
                     )),
                 new ViewAnimeGroup("2019",
-                    ImmutableList.of(
+                    List.of(
                         new ViewAnime("wataten")
                     ))
             );

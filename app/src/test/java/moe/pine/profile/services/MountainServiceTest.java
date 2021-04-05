@@ -1,6 +1,5 @@
 package moe.pine.profile.services;
 
-import com.google.common.collect.ImmutableList;
 import moe.pine.profile.models.ViewMountain;
 import moe.pine.profile.properties.MountainProperties;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,9 +33,9 @@ class MountainServiceTest {
     }
 
     @Test
-     void getClimbedTest() {
+    void getClimbedTest() {
         final List<MountainProperties.Mountain> mountains =
-            ImmutableList.of(
+            List.of(
                 new MountainProperties.Mountain("homu", 2345, YearMonth.of(2019, 1)),
                 new MountainProperties.Mountain("homuhomu", 999, YearMonth.of(2020, 12))
             );
@@ -44,7 +43,7 @@ class MountainServiceTest {
         when(mountainProperties.getClimbed()).thenReturn(mountains);
 
         final List<ViewMountain> expected =
-            ImmutableList.of(
+            List.of(
                 new ViewMountain("homu", "2,345m", "2019/01"),
                 new ViewMountain("homuhomu", "999m", "2020/12")
             );
