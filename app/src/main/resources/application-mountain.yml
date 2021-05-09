@@ -96,4 +96,7 @@ mountain:
     - name: 鋸山
       height: 329
       climbed-at: 2021-03
+    - name: 陣馬山
+      height: 854
+      climbed-at: 2021-05
 
