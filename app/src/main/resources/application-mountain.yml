@@ -111,3 +111,6 @@ mountain:
     - name: "阿蘇山: 烏帽子岳"
       height: 1337
       climbed-at: 2021-07
+    - name: 乾徳山
+      height: 2031
+      climbed-at: 2021-08
