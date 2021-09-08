@@ -114,3 +114,12 @@ mountain:
     - name: 乾徳山
       height: 2031
       climbed-at: 2021-08
+    - name: 富士山
+      height: 3776
+      climbed-at: 2021-08
+    - name: 陣馬山
+      height: 854
+      climbed-at: 2021-08
+    - name: 富士山
+      height: 3776
+      climbed-at: 2021-09
