@@ -26,6 +26,9 @@ dependencies {
     implementation 'com.googlecode.htmlcompressor:htmlcompressor'
     implementation 'org.mozilla:rhino'
 
+    // SpotBugs
+    implementation 'com.github.spotbugs:spotbugs-annotations'
+
     // Powermock
     testImplementation 'org.powermock:powermock-reflect'
 }

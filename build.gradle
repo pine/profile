@@ -1,11 +1,13 @@
 buildscript {
     ext {
-        springBootVersion = '2.5.5'
+        springBootVersion = '2.6.0-M3'
+        spotbugsVersion = '4.4.1'
         lombokVersion = '1.18.20'
     }
     repositories {
         mavenCentral()
         maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://repo.spring.io/milestone' }
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
@@ -23,11 +25,12 @@ allprojects {
 
     group 'moe.pine.profile'
 
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 
     repositories {
         mavenCentral()
+        maven { url 'https://repo.spring.io/milestone' }
     }
 
     compileJava {
@@ -45,7 +48,7 @@ allprojects {
     apply plugin: 'jacoco'
 
     jacoco {
-        toolVersion = '0.8.3'
+        toolVersion = '0.8.7'
     }
 }
 
@@ -76,6 +79,7 @@ subprojects {
 
             // Test
             dependency 'org.powermock:powermock-reflect:2.0.0'
+            dependency "com.github.spotbugs:spotbugs-annotations:$spotbugsVersion"
         }
     }
     dependencies {
@@ -92,7 +96,7 @@ subprojects {
     apply plugin: 'com.github.spotbugs'
 
     spotbugs {
-        toolVersion = '3.1.8'
+        toolVersion = spotbugsVersion
         excludeFilter = file("${project.rootDir}/config/findbugs-exclude.xml")
         spotbugsTest.enabled = false
     }

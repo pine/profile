@@ -1,6 +1,7 @@
 package moe.pine.profile.repositories;
 
 import com.google.common.annotations.VisibleForTesting;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -20,6 +21,7 @@ import static com.google.common.base.Preconditions.checkState;
 
 @Repository
 @Slf4j
+@SuppressFBWarnings("DMI_RANDOM_USED_ONLY_ONCE")
 public class BackgroundRepository {
     @VisibleForTesting
     static String LOCATION_PATTERN = "classpath:/static/images/bg/*.jpg";
