@@ -2,35 +2,39 @@
 
 spring:
   profiles:
-    active: local
+    default: local
+  config:
+    import:
+      - 'classpath:anime.yml'
+      - 'classpath:app.yml'
+      - 'classpath:mountain.yml'
   freemarker:
     prefer-file-system-access: false
   output:
     ansi:
       enabled: always
-  resources:
-    cache:
-      cachecontrol:
-        cache-public: true
-        max-age: 31536000 # 1 year
-    chain:
-      strategy:
-        content:
-          enabled: true
-          paths: /**
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          cache-public: true
+          max-age: 31536000 # 1 year
+      chain:
+        strategy:
+          content:
+            enabled: true
+            paths: /**
 
 ---
 
-spring.profiles: local
-spring.profiles.include:
-  - anime
-  - app
-  - mountain
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+server:
+  error:
+    whitelabel:
+      enabled: false
 
 ---
-
-spring.profiles: prod
-spring.profiles.include:
-  - anime
-  - app
-  - mountain
