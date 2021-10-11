@@ -123,3 +123,15 @@ mountain:
     - name: 富士山
       height: 3776
       climbed-at: 2021-09
+    - name: 高水山
+      height: 759
+      climbed-at: 2021-10
+    - name: 岩茸石山
+      height: 793
+      climbed-at: 2021-10
+    - name: 惣岳山
+      height: 756
+      climbed-at: 2021-10
+    - name: 北岳
+      height: 3193
+      climbed-at: 2021-10
