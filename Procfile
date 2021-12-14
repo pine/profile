@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar app/build/libs/app.jar $JAR_OPTS --server.port=$PORT
+web: java $JAVA_OPTS -jar app/build/libs/app.jar --server.port=$PORT
