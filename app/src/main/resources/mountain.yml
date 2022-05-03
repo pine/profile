@@ -138,3 +138,30 @@ mountain:
     - name: 北岳
       height: 3193
       climbed-at: 2021-10
+    - name: 滝子山
+      height: 1620
+      climbed-at: 2021-10
+    - name: 蛭ヶ岳
+      height: 1673
+      climbed-at: 2021-11
+    - name: 丹沢山
+      height: 1567
+      climbed-at: 2021-11
+    - name: 塔ノ岳
+      height: 1491
+      climbed-at: 2021-11
+    - name: 金時山
+      height: 1212
+      climbed-at: 2021-12
+    - name: 三つ峠
+      height: 1785
+      climbed-at: 2022-01
+    - name: 谷川岳
+      height: 1977
+      climbed-at: 2022-04
+    - name: 赤城山
+      height: 1828
+      climbed-at: 2022-04
+    - name: 武甲山
+      height: 1304
+      climbed-at: 2022-04
