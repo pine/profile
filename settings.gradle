@@ -1,4 +1,0 @@
-rootProject.name = 'profile-website'
-
-include ':app'
-
