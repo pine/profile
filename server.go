@@ -1,21 +1,33 @@
 package main
 
 import (
-	"net/http"
-
+	"github.com/CloudyKit/jet/v6"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
+	"html/template"
+	"io"
 )
+
+type Template struct {
+	templates *template.Template
+}
+
+func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+	return t.templates.ExecuteTemplate(w, name, data)
+}
 
 func main() {
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	e.Use(middleware.Secure())
+	e.Use(middleware.Logger())
 
-	e.GET("/healthcheck", func(c echo.Context) error {
-		return c.String(http.StatusOK, "OK")
-    })
+	t := &Template{
+		templates: template.Must(template.ParseGlob("templates/*.html")),
+	}
+	e.Renderer = t
 
+	e.GET("/", Home)
+	e.GET("/healthcheck", Healthcheck)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
