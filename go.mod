@@ -3,12 +3,11 @@ module github.com/pine/profile
 go 1.18
 
 require (
-	github.com/CloudyKit/jet/v6 v6.1.0
+	github.com/flosch/pongo2/v5 v5.0.0
 	github.com/labstack/echo/v4 v4.7.2
 )
 
 require (
-	github.com/CloudyKit/fastprinter v0.0.0-20200109182630-33d98a066a53 // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
