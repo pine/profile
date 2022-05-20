@@ -12,10 +12,10 @@ jobs:
           name: Checkout submodule
           command: |
             git submodule update --init --recursive
-      # - restore_cache:
-      #     keys:
-      #       - v1-dependencies-{{ checksum "build.gradle" }}
-      #       - v1-dependencies-
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "go.sum" }}
+            - v1-dependencies-
       # - run:
       #     name: Test
       #     command: |
@@ -25,10 +25,11 @@ jobs:
       #     name: Build
       #     command: |
       #       ./gradlew clean :app:bootJar
-      # - save_cache:
-      #     paths:
-      #       - ~/.gradle
-      #     key: v1-dependencies-{{ checksum "build.gradle" }}
+      - save_cache:
+          key: v1-dependencies-{{ checksum "go.sum" }}
+          paths:
+            - /go/pkg/mod
+
       # - run:
       #     name: Deployment
       #     command: |
