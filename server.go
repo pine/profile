@@ -40,7 +40,7 @@ func main() {
 
 func Index(c echo.Context) error {
 	c.Response().Header().Set("Cache-Control", "public, max-age=180, must-revalidate")
-	return c.Redirect(http.StatusSeeOther, "/ja/home")
+	return c.Redirect(http.StatusSeeOther, "/home/ja")
 }
 
 func HomeJa(c echo.Context) error {
