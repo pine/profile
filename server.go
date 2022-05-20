@@ -13,7 +13,7 @@ type Renderer struct {
 }
 
 func (r *Renderer) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
-	err, t := r.templates.FromCache(name)
+	t, err := r.templates.FromCache(name)
 	if err != nil {
 		return err
 	}
