@@ -13,7 +13,11 @@ type Renderer struct {
 }
 
 func (r *Renderer) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
-	t := pongo2.Must(r.templates.FromCache(name))
+	err, t := r.templates.FromCache(name)
+	if err != nil {
+		return err
+	}
+
 	return t.ExecuteWriter(nil, w)
 }
 
