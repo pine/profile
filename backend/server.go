@@ -22,13 +22,14 @@ func (r *Renderer) Render(w io.Writer, name string, data interface{}, c echo.Con
 }
 
 func main() {
+	t := pongo2.NewSet("main", pongo2.MustNewLocalFileSystemLoader("templates"))
+	t.Debug = true
+
+	r := &Renderer{templates: t}
+
 	e := echo.New()
 	e.Use(middleware.Secure())
 	e.Use(middleware.Logger())
-
-	r := &Renderer{
-		templates: pongo2.NewSet("main", pongo2.MustNewLocalFileSystemLoader("templates")),
-	}
 	e.Renderer = r
 
 	e.GET("/", Index)
