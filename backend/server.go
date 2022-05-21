@@ -4,7 +4,9 @@ import (
 	"github.com/flosch/pongo2/v5"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/labstack/gommon/log"
 	"io"
+	"os"
 	"net/http"
 )
 
@@ -22,15 +24,33 @@ func (r *Renderer) Render(w io.Writer, name string, data interface{}, c echo.Con
 }
 
 func main() {
+	e := echo.New()
+
+	// Debug
+	env := os.Getenv("PF_ENV")
+	if env == "" {
+		env = "development"
+	}
+
+	debug := env == "development"
+	e.Debug = debug
+
+	if debug {
+		e.Logger.SetLevel(log.DEBUG)
+	} else {
+		e.Logger.SetLevel(log.INFO)
+	}
+	e.Logger.Infof("Environment detected. (env=%v, debug=%v)", env, debug)
+
+	// Template
 	t := pongo2.NewSet("main", pongo2.MustNewLocalFileSystemLoader("templates"))
-	t.Debug = true
+	t.Debug = debug
 
 	r := &Renderer{templates: t}
+	e.Renderer = r
 
-	e := echo.New()
 	e.Use(middleware.Secure())
 	e.Use(middleware.Logger())
-	e.Renderer = r
 
 	e.GET("/", Index)
 	e.GET("/home/ja", HomeJa)
