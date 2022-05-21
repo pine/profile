@@ -1,4 +1,4 @@
-module github.com/pine/profile
+module github.com/pine/profile/backend
 
 go 1.18
 
