@@ -25,7 +25,7 @@ func main() {
 	}
 
 	// Template
-	t := NewTemplate()
+	t := NewTemplate(e.Logger)
 	e.Renderer = t
 
 	e.Use(middleware.Secure())
