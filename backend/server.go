@@ -47,7 +47,7 @@ func HomeJa(c echo.Context) error {
 	c.Response().Header().Set("Cache-Control", "public, max-age=180, must-revalidate")
 	return c.Render(http.StatusOK, "home.html",
 		pongo2.Context{
-			// "title": "foo",
+			"lang": "ja",
 		})
 }
 
