@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}
-{{ title }}
+aaa
 {% endblock %}
 
 {% block head %}
-{{ super() }}
+{{ block.Super|safe }}
 <link rel="canonical" href="{{ site_url }}{{ path }}">
 {% endblock %}
 
+
 {% block content %}
 Home
+
+bbb
 
 {% endblock %}
