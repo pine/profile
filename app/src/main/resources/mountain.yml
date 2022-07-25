@@ -165,3 +165,21 @@ mountain:
     - name: 武甲山
       height: 1304
       climbed-at: 2022-04
+    - name: 伊豆ヶ岳
+      height: 850
+      climbed-at: 2022-05
+    - name: 北横岳
+      height: 2480
+      climbed-at: 2022-05
+    - name: 両神山
+      height: 1723
+      climbed-at: 2022-05
+    - name: 日光白根山
+      height: 2578
+      climbed-at: 2022-06
+    - name: 金峰山
+      height: 2599
+      climbed-at: 2022-07
+    - name: 乗鞍岳
+      height: 3026
+      climbed-at: 2022-07
