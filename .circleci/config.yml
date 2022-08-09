@@ -39,7 +39,7 @@ jobs:
             - app/build/libs/app.jar
   deploy:
     docker:
-      - image: cimg/node:lts
+      - image: cimg/openjdk:11.0-node
     steps:
       - checkout
       - run:
