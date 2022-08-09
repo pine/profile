@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  heroku: circleci/heroku@1.2.6
 jobs:
   build:
     docker:
@@ -31,11 +33,11 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
+      - heroku/install
       - run:
           name: Deployment
           command: |
             if [ "$CIRCLE_BRANCH" == "main" ]; then
-              ./.circleci/setup-heroku.sh
               ./.circleci/setup-retry.sh
               retry -- heroku plugins:install java
               retry -- heroku deploy:jar \
