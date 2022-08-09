@@ -37,6 +37,12 @@ jobs:
           root: .
           paths:
             - app/build/libs/app.jar
+  deploy:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - attach_workspace:
+          at: .
       - heroku/install
       - run:
           name: Deployment
@@ -49,3 +55,10 @@ jobs:
                 --jdk 11 \
                 --app $HEROKU_APP
             fi
+workflows:
+   main:
+     jobs:
+       - build
+       - deploy:
+           requires:
+             - build
