@@ -34,9 +34,9 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
       - persist_to_workspace:
-        root: .
-        paths:
-          - app/build/libs/app.jar
+          root: .
+          paths:
+            - app/build/libs/app.jar
       - heroku/install
       - run:
           name: Deployment
