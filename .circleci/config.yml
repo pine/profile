@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Checkout submodule
           command: |
-            git submodule update --init
+            git submodule update --init --recursive
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "build.gradle" }}
@@ -41,6 +41,11 @@ jobs:
     docker:
       - image: cimg/node:lts
     steps:
+      - checkout
+      - run:
+          name: Checkout submodule
+          command: |
+            git submodule update --init --recursive
       - attach_workspace:
           at: .
       - heroku/install
