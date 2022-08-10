@@ -34,40 +34,21 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-      - persist_to_workspace:
-          root: .
-          paths:
-            - app/build/libs/app.jar
-  deploy:
-    docker:
-      - image: cimg/openjdk:11.0-node
-    steps:
-      - checkout
-      - run:
-          name: Checkout submodule
-          command: |
-            git submodule update --init --recursive
-      - attach_workspace:
-          at: .
-      - heroku/install
-      - run:
-          name: Deployment
-          command: |
-            ./.circleci/setup-retry.sh
-            retry -- heroku plugins:install java
-            retry -- heroku deploy:jar \
-              --jar app/build/libs/app.jar \
-              --jdk 11 \
-              --app $HEROKU_APP
+      - when:
+          condition:
+            equal: [ main, << pipeline.git.branch >> ]
+          steps:
+            - heroku/install
+            - run:
+                name: Deployment
+                command: |
+                  ./.circleci/setup-retry.sh
+                  retry -- heroku plugins:install java
+                  retry -- heroku deploy:jar \
+                    --jar app/build/libs/app.jar \
+                    --jdk 11 \
+                    --app $HEROKU_APP
 workflows:
   main:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - main
-
