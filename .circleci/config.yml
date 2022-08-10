@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@1.2.6
+  codecov: codecov/codecov@3.2.3
 jobs:
   build:
     docker:
@@ -24,7 +25,7 @@ jobs:
           name: Test
           command: |
             ./gradlew clean check jacocoTestReport
-            bash <(curl -s https://codecov.io/bash)
+      - codecov/upload
       - run:
           name: Build
           command: |
