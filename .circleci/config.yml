@@ -48,7 +48,3 @@ jobs:
                     --jar app/build/libs/app.jar \
                     --jdk 11 \
                     --app $HEROKU_APP
-workflows:
-  main:
-    jobs:
-      - build
