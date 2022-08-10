@@ -53,18 +53,21 @@ jobs:
       - run:
           name: Deployment
           command: |
-            if [ "$CIRCLE_BRANCH" == "main" ]; then
-              ./.circleci/setup-retry.sh
-              retry -- heroku plugins:install java
-              retry -- heroku deploy:jar \
-                --jar app/build/libs/app.jar \
-                --jdk 11 \
-                --app $HEROKU_APP
-            fi
+            ./.circleci/setup-retry.sh
+            retry -- heroku plugins:install java
+            retry -- heroku deploy:jar \
+              --jar app/build/libs/app.jar \
+              --jdk 11 \
+              --app $HEROKU_APP
 workflows:
-   main:
-     jobs:
-       - build
-       - deploy:
-           requires:
-             - build
+  main:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - main
+
