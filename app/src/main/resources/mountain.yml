@@ -186,3 +186,9 @@ mountain:
     - name: 安達太良山
       height: 1700
       climbed-at: 2022-08
+    - name: 富士山
+      height: 3776
+      climbed-at: 2022-08
+    - name: 仙丈ヶ岳
+      height: 3033
+      climbed-at: 2022-09
