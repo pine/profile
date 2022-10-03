@@ -192,3 +192,9 @@ mountain:
     - name: 仙丈ヶ岳
       height: 3033
       climbed-at: 2022-09
+    - name: 常念岳
+      height: 2857
+      climbed-at: 2022-10
+    - name: 蝶ヶ岳
+      height: 2677
+      climbed-at: 2022-10
