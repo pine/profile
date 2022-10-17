@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  heroku: circleci/heroku@1.2.6
+  # heroku: circleci/heroku@1.2.6
   codecov: codecov/codecov@3.2.3
 jobs:
   build:
@@ -13,38 +13,38 @@ jobs:
       YARN_SILENT: 1
     steps:
       - checkout
-      - run:
-          name: Checkout submodule
-          command: |
-            git submodule update --init --recursive
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
-            - v1-dependencies-
-      - run:
-          name: Test
-          command: |
-            ./gradlew clean check jacocoTestReport
-      - codecov/upload
-      - run:
-          name: Build
-          command: |
-            ./gradlew clean :app:bootJar
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
-      - when:
-          condition:
-            equal: [ main, << pipeline.git.branch >> ]
-          steps:
-            - heroku/install
-            - run:
-                name: Deployment
-                command: |
-                  ./.circleci/setup-retry.sh
-                  retry -- heroku plugins:install java
-                  retry -- heroku deploy:jar \
-                    --jar app/build/libs/app.jar \
-                    --jdk 11 \
-                    --app $HEROKU_APP
+      # - run:
+      #     name: Checkout submodule
+      #     command: |
+      #       git submodule update --init --recursive
+      # - restore_cache:
+      #     keys:
+      #       - v1-dependencies-{{ checksum "build.gradle" }}
+      #       - v1-dependencies-
+      # - run:
+      #     name: Test
+      #     command: |
+      #       ./gradlew clean check jacocoTestReport
+      # - codecov/upload
+      # - run:
+      #     name: Build
+      #     command: |
+      #       ./gradlew clean :app:bootJar
+      # - save_cache:
+      #     paths:
+      #       - ~/.gradle
+      #     key: v1-dependencies-{{ checksum "build.gradle" }}
+      # - when:
+      #     condition:
+      #       equal: [ main, << pipeline.git.branch >> ]
+      #     steps:
+      #       - heroku/install
+      #       - run:
+      #           name: Deployment
+      #           command: |
+      #             ./.circleci/setup-retry.sh
+      #             retry -- heroku plugins:install java
+      #             retry -- heroku deploy:jar \
+      #               --jar app/build/libs/app.jar \
+      #               --jdk 11 \
+      #               --app $HEROKU_APP
