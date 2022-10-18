@@ -3,6 +3,38 @@
   name_ja: 高尾山
   name_en: Mount Takao
   elevation: 1721
+- id: 2
+  name_ja: 榛名山
+  name_en: Mount Haruna
+  elevation: 1449
+- id: 3
+  name_ja: 赤岳
+  name_en: Mount Aka
+  elevation: 2899
+- id: 4
+  name_ja: 阿弥陀岳
+  name_en: Mount Amida
+  elevation: 2805
+- id: 5
+  name_ja: 大菩薩嶺
+  name_en: Mount Daibosatsu
+  elevation: 2056
+- id: 6
+  name_ja: 富士山
+  name_en: Mount Fuji
+  elevation: 3776
+- id: 7
+  name_ja: 筑波山
+  name_en: Mount Tsukuba
+  elevation: 877
+- id: 8
+  name_ja: 大岳山
+  name_en: Mount Odake
+  elevation: 1266
+- id: 9
+  name_ja: 御岳山
+  name_en: Mount Mitake
+  elevation: 929
 
 # - id: 56
 #   name: 常念岳
