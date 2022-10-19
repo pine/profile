@@ -75,12 +75,10 @@
   name_ja: 北横岳
   name_en: Mount Kitayoko
   elevation: 2480
-# - name_ja: 富士山
-#   elevation: 3776
-#   climbed_on: 2019-07
-# - name_ja: 御嶽山
-#   elevation: 3067
-#   climbed_on: 2019-08
+- id: 20
+  name_ja: 御嶽山
+  name_en: Mount Ontake
+  elevation: 3067
 # - name_ja: 燕岳
 #   elevation: 2763
 #   climbed_on: 2019-09

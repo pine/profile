@@ -62,3 +62,9 @@
 - id: 21
   mountain_id: 19
   climbed_on: 2019-07
+- id: 22
+  mountain_id: 6
+  climbed_on: 2019-07
+- id: 23
+  mountain_id: 20
+  climbed_on: 2019-08
