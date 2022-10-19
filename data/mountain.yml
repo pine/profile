@@ -35,7 +35,184 @@
   name_ja: 御岳山
   name_en: Mount Mitake
   elevation: 929
-
-# - id: 56
-#   name: 常念岳
-#   name_en: Mount Jonen
+- id: 10
+  name_ja: 塔ノ岳
+  name_en: Mount Tonodake
+  elevation: 1491
+- id: 11
+  name_ja: 不忘山
+  name_en: Mount Fubo
+  elevation: 1705
+- id: 12
+  name_ja: 雲取山
+  name_en: Mount Kumotori
+  elevation: 2017
+- id: 13
+  name_ja: 甲斐駒ヶ岳
+  name_en: Mount Kaikoma
+  elevation: 2967
+- id: 14
+  name_ja: 於茂登岳
+  name_en: Mount Omoto
+  elevation: 525
+- id: 15
+  name_ja: 韓国岳
+  name_en: Mount Karakuni
+  elevation: 1700
+- id: 16
+  name_ja: 甲州高尾山
+  name_en: Mount Koshutakao
+  elevation: 1106
+- id: 17
+  name_ja: 旭岳
+  name_en: Mount Asahi
+  elevation: 2291
+- id: 18
+  name_ja: 入笠山
+  name_en: Mount Nyukasa
+  elevation: 1955
+- id: 19
+  name_ja: 北横岳
+  name_en: Mount Kitayoko
+  elevation: 2480
+# - name_ja: 富士山
+#   elevation: 3776
+#   climbed_on: 2019-07
+# - name_ja: 御嶽山
+#   elevation: 3067
+#   climbed_on: 2019-08
+# - name_ja: 燕岳
+#   elevation: 2763
+#   climbed_on: 2019-09
+# - name_ja: 大天井岳
+#   elevation: 2922
+#   climbed_on: 2019-09
+# - name_ja: '八ヶ岳: 硫黄岳'
+#   elevation: 2760
+#   climbed_on: 2019-12
+# - name_ja: 谷川岳
+#   elevation: 1977
+#   climbed_on: 2020-02
+# - name_ja: 高尾山
+#   elevation: 599
+#   climbed_on: 2020-08
+# - name_ja: 比叡山
+#   elevation: 848
+#   climbed_on: 2020-09
+# - name_ja: 高尾山
+#   elevation: 599
+#   climbed_on: 2020-12
+# - name_ja: 大菩薩峠
+#   elevation: 1897
+#   climbed_on: 2021-01
+# - name_ja: 筑波山
+#   elevation: 877
+#   climbed_on: 2021-01
+# - name_ja: 大山 (神奈川県)
+#   elevation: 1252
+#   climbed_on: 2021-02
+# - name_ja: 鋸山
+#   elevation: 329
+#   climbed_on: 2021-03
+# - name_ja: 陣馬山
+#   elevation: 854
+#   climbed_on: 2021-05
+# - name_ja: 棒ノ折山
+#   elevation: 969
+#   climbed_on: 2021-06
+# - name_ja: 伊豆ヶ岳
+#   elevation: 850
+#   climbed_on: 2021-07
+# - name_ja: 瑞牆山
+#   elevation: 2230
+#   climbed_on: 2021-07
+# - name_ja: "阿蘇山: 烏帽子岳"
+#   elevation: 1337
+#   climbed_on: 2021-07
+# - name_ja: 乾徳山
+#   elevation: 2031
+#   climbed_on: 2021-08
+# - name_ja: 富士山
+#   elevation: 3776
+#   climbed_on: 2021-08
+# - name_ja: 陣馬山
+#   elevation: 854
+#   climbed_on: 2021-08
+# - name_ja: 富士山
+#   elevation: 3776
+#   climbed_on: 2021-09
+# - name_ja: 高水山
+#   elevation: 759
+#   climbed_on: 2021-10
+# - name_ja: 岩茸石山
+#   elevation: 793
+#   climbed_on: 2021-10
+# - name_ja: 惣岳山
+#   elevation: 756
+#   climbed_on: 2021-10
+# - name_ja: 北岳
+#   elevation: 3193
+#   climbed_on: 2021-10
+# - name_ja: 滝子山
+#   elevation: 1620
+#   climbed_on: 2021-10
+# - name_ja: 蛭ヶ岳
+#   elevation: 1673
+#   climbed_on: 2021-11
+# - name_ja: 丹沢山
+#   elevation: 1567
+#   climbed_on: 2021-11
+# - name_ja: 塔ノ岳
+#   elevation: 1491
+#   climbed_on: 2021-11
+# - name_ja: 金時山
+#   elevation: 1212
+#   climbed_on: 2021-12
+# - name_ja: 三つ峠
+#   elevation: 1785
+#   climbed_on: 2022-01
+# - name_ja: 谷川岳
+#   elevation: 1977
+#   climbed_on: 2022-04
+# - name_ja: 赤城山
+#   elevation: 1828
+#   climbed_on: 2022-04
+# - name_ja: 武甲山
+#   elevation: 1304
+#   climbed_on: 2022-04
+# - name_ja: 伊豆ヶ岳
+#   elevation: 850
+#   climbed_on: 2022-05
+# - name_ja: 北横岳
+#   elevation: 2480
+#   climbed_on: 2022-05
+# - name_ja: 両神山
+#   elevation: 1723
+#   climbed_on: 2022-05
+# - name_ja: 日光白根山
+#   elevation: 2578
+#   climbed_on: 2022-06
+# - name_ja: 金峰山
+#   elevation: 2599
+#   climbed_on: 2022-07
+# - name_ja: 乗鞍岳
+#   elevation: 3026
+#   climbed_on: 2022-07
+# - name_ja: 安達太良山
+#   elevation: 1700
+#   climbed_on: 2022-08
+# - name_ja: 富士山
+#   elevation: 3776
+#   climbed_on: 2022-08
+# - name_ja: 仙丈ヶ岳
+#   elevation: 3033
+#   climbed_on: 2022-09
+# - name_ja: 常念岳
+#   elevation: 2857
+#   climbed_on: 2022-10
+# - name_ja: 蝶ヶ岳
+#   elevation: 2677
+#   climbed_on: 2022-10
+# - name_ja: 八海山
+#   elevation: 1778
+#   climbed_on: 2022-10

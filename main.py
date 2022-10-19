@@ -12,4 +12,4 @@ with open('data/climbed_mountain.yml') as f:
 df = climbed_df.merge(mountain_df, left_on='mountain_id', right_index=True) \
         .sort_index()
 print(df)
-
+# print(df.to_dict('records'))
