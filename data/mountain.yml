@@ -61,7 +61,7 @@
   elevation: 1700
 - id: 16
   name_ja: 甲州高尾山
-  name_en: Mount Koshutakao
+  name_en: Mount Koshu-Takao
   elevation: 1106
 - id: 17
   name_ja: 旭岳
@@ -143,69 +143,71 @@
   name_ja: 惣岳山
   name_en: ~
   elevation: 756
-# - name_ja: 北岳
-#   elevation: 3193
-#   climbed_on: 2021-10
-# - name_ja: 滝子山
-#   elevation: 1620
-#   climbed_on: 2021-10
-# - name_ja: 蛭ヶ岳
-#   elevation: 1673
-#   climbed_on: 2021-11
-# - name_ja: 丹沢山
-#   elevation: 1567
-#   climbed_on: 2021-11
-# - name_ja: 塔ノ岳
-#   elevation: 1491
-#   climbed_on: 2021-11
-# - name_ja: 金時山
-#   elevation: 1212
-#   climbed_on: 2021-12
-# - name_ja: 三つ峠
-#   elevation: 1785
-#   climbed_on: 2022-01
-# - name_ja: 谷川岳
-#   elevation: 1977
-#   climbed_on: 2022-04
-# - name_ja: 赤城山
-#   elevation: 1828
-#   climbed_on: 2022-04
-# - name_ja: 武甲山
-#   elevation: 1304
-#   climbed_on: 2022-04
-# - name_ja: 伊豆ヶ岳
-#   elevation: 850
-#   climbed_on: 2022-05
-# - name_ja: 北横岳
-#   elevation: 2480
-#   climbed_on: 2022-05
-# - name_ja: 両神山
-#   elevation: 1723
-#   climbed_on: 2022-05
-# - name_ja: 日光白根山
-#   elevation: 2578
-#   climbed_on: 2022-06
-# - name_ja: 金峰山
-#   elevation: 2599
-#   climbed_on: 2022-07
-# - name_ja: 乗鞍岳
-#   elevation: 3026
-#   climbed_on: 2022-07
-# - name_ja: 安達太良山
-#   elevation: 1700
-#   climbed_on: 2022-08
-# - name_ja: 富士山
-#   elevation: 3776
-#   climbed_on: 2022-08
-# - name_ja: 仙丈ヶ岳
-#   elevation: 3033
-#   climbed_on: 2022-09
-# - name_ja: 常念岳
-#   elevation: 2857
-#   climbed_on: 2022-10
-# - name_ja: 蝶ヶ岳
-#   elevation: 2677
-#   climbed_on: 2022-10
-# - name_ja: 八海山
-#   elevation: 1778
-#   climbed_on: 2022-10
+- id: 37
+  name_ja: 北岳
+  name_en: Mount Kita
+  elevation: 3193
+- id: 38
+  name_ja: 滝子山
+  name_en: Mount Takigo
+  elevation: 1620
+- id: 39
+  name_ja: 蛭ヶ岳
+  name_en: Mount Hiru
+  elevation: 1673
+- id: 40
+  name_ja: 丹沢山
+  name_en: Mount Tanzawa
+  elevation: 1567
+- id: 41
+  name_ja: 金時山
+  name_en: Mount Kintoki
+  elevation: 1212
+- id: 42
+  name_ja: 三つ峠
+  name_en: Mount Mitsutoge
+  elevation: 1785
+- id: 43
+  name_ja: 赤城山
+  name_en: Mount Akagi
+  elevation: 1828
+- id: 44
+  name_ja: 武甲山
+  name_en: Mount Buko
+  elevation: 1304
+- id: 45
+  name_ja: 両神山
+  name_en: Mount Ryokami
+  elevation: 1723
+- id: 46
+  name_ja: 日光白根山
+  name_en: Mount Nikko-Shirane
+  elevation: 2578
+- id: 47
+  name_ja: 金峰山
+  name_en: Mount Kinpu
+  elevation: 2599
+- id: 48
+  name_ja: 乗鞍岳
+  name_en: Mount Norikura
+  elevation: 3026
+- id: 49
+  name_ja: 安達太良山
+  name_en: Mount Adatara
+  elevation: 1700
+- id: 50
+  name_ja: 仙丈ヶ岳
+  name_en: Mount Senjo
+  elevation: 3033
+- id: 51
+  name_ja: 常念岳
+  name_en: Mount Jonen
+  elevation: 2857
+- id: 52
+  name_ja: 蝶ヶ岳
+  name_en: Mount Chogatake
+  elevation: 2677
+- id: 53
+  name_ja: 八海山
+  name_en: Mount Hakkai
+  elevation: 1778
