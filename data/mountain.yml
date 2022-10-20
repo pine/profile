@@ -2,7 +2,7 @@
 - id: 1
   name_ja: 高尾山
   name_en: Mount Takao
-  elevation: 1721
+  elevation: 599
 - id: 2
   name_ja: 榛名山
   name_en: Mount Haruna
@@ -79,75 +79,70 @@
   name_ja: 御嶽山
   name_en: Mount Ontake
   elevation: 3067
-# - name_ja: 燕岳
-#   elevation: 2763
-#   climbed_on: 2019-09
-# - name_ja: 大天井岳
-#   elevation: 2922
-#   climbed_on: 2019-09
-# - name_ja: '八ヶ岳: 硫黄岳'
-#   elevation: 2760
-#   climbed_on: 2019-12
-# - name_ja: 谷川岳
-#   elevation: 1977
-#   climbed_on: 2020-02
-# - name_ja: 高尾山
-#   elevation: 599
-#   climbed_on: 2020-08
-# - name_ja: 比叡山
-#   elevation: 848
-#   climbed_on: 2020-09
-# - name_ja: 高尾山
-#   elevation: 599
-#   climbed_on: 2020-12
-# - name_ja: 大菩薩峠
-#   elevation: 1897
-#   climbed_on: 2021-01
-# - name_ja: 筑波山
-#   elevation: 877
-#   climbed_on: 2021-01
-# - name_ja: 大山 (神奈川県)
-#   elevation: 1252
-#   climbed_on: 2021-02
-# - name_ja: 鋸山
-#   elevation: 329
-#   climbed_on: 2021-03
-# - name_ja: 陣馬山
-#   elevation: 854
-#   climbed_on: 2021-05
-# - name_ja: 棒ノ折山
-#   elevation: 969
-#   climbed_on: 2021-06
-# - name_ja: 伊豆ヶ岳
-#   elevation: 850
-#   climbed_on: 2021-07
-# - name_ja: 瑞牆山
-#   elevation: 2230
-#   climbed_on: 2021-07
-# - name_ja: "阿蘇山: 烏帽子岳"
-#   elevation: 1337
-#   climbed_on: 2021-07
-# - name_ja: 乾徳山
-#   elevation: 2031
-#   climbed_on: 2021-08
-# - name_ja: 富士山
-#   elevation: 3776
-#   climbed_on: 2021-08
-# - name_ja: 陣馬山
-#   elevation: 854
-#   climbed_on: 2021-08
-# - name_ja: 富士山
-#   elevation: 3776
-#   climbed_on: 2021-09
-# - name_ja: 高水山
-#   elevation: 759
-#   climbed_on: 2021-10
-# - name_ja: 岩茸石山
-#   elevation: 793
-#   climbed_on: 2021-10
-# - name_ja: 惣岳山
-#   elevation: 756
-#   climbed_on: 2021-10
+- id: 21
+  name_ja: 燕岳
+  name_en: Mount Tsubakuro
+  elevation: 2763
+- id: 22
+  name_ja: 大天井岳
+  name_en: Mount Otensho
+  elevation: 2922
+- id: 23
+  name_ja: 硫黄岳
+  name_en: Mount Io
+  elevation: 2760
+- id: 24
+  name_ja: 谷川岳
+  name_en: Mount Tanigawa
+  elevation: 1977
+- id: 25
+  name_ja: 比叡山
+  name_en: Mount Hiei
+  elevation: 848
+- id: 26
+  name_ja: 大山
+  name_en: Mount Oyama
+  elevation: 1252
+- id: 27
+  name_ja: 鋸山
+  name_en: Mount Nokogiri
+  elevation: 329
+- id: 28
+  name_ja: 陣馬山
+  name_en: Mount Jinba
+  elevation: 854
+- id: 29
+  name_ja: 棒ノ折山
+  name_en: Mount Bonoore
+  elevation: 969
+- id: 30
+  name_ja: 伊豆ヶ岳
+  name_en: Mount Izugatake
+  elevation: 850
+- id: 31
+  name_ja: 瑞牆山
+  name_en: Mount Mizugaki
+  elevation: 2230
+- id: 32
+  name_ja: 烏帽子岳
+  name_en: Mount Eboshi
+  elevation: 1337
+- id: 33
+  name_ja: 乾徳山
+  name_en: Mount Kentoku
+  elevation: 2031
+- id: 34
+  name_ja: 高水山
+  name_en: Mount Takamizu
+  elevation: 759
+- id: 35
+  name_ja: 岩茸石山
+  name_en: ~
+  elevation: 793
+- id: 36
+  name_ja: 惣岳山
+  name_en: ~
+  elevation: 756
 # - name_ja: 北岳
 #   elevation: 3193
 #   climbed_on: 2021-10
