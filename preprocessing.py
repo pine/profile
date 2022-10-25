@@ -1,7 +1,11 @@
 # coding: utf-8
 
 import pandas as pd
+import textwrap
 import yaml
+
+from jinja2 import Template
+
 
 with open('data/mountain.yml') as f:
     mountain_df = pd.DataFrame(yaml.safe_load(f)) \
@@ -33,13 +37,45 @@ with open('data/mountain_cordillera.yml') as f:
     mountain_cordillera_df = pd.DataFrame(yaml.safe_load(f)) \
             .astype('Int64')
 
-df = climbed_df.merge(mountain_df) \
+
+mountain_summary_df = climbed_df.merge(mountain_df) \
         .merge(mountain_cordillera_df, how='left') \
         .merge(cordillera_df, how='left') \
         .set_index('climbed_mountain_id') \
-        .sort_index()
+        .sort_index() \
+        .replace({ pd.NA: None})
 
-print(df.to_string())
-# print(df.to_dict('records'))
-print(df.index.dtype)
-print(df.dtypes)
+
+source = '''\
+    # coding: utf-8
+
+    from typing import NamedTuple
+
+    class Mountain(NamedTuple):
+        mountain_id: int
+        climbed_on: str
+        mountain_name_ja: str
+        mountain_name_en: str
+        elevation: int
+        cordillera_id: int
+        cordillera_name_ja: str
+        cordillera_name_en: str
+
+    MOUNTAINS = [
+        {%- for it in mountains %}
+        Mountain({{ it.mountain_id }},
+                 "{{ it.climbed_on }}",
+                 "{{ it.mountain_name_ja }}",
+                 "{{ it.mountain_name_en }}",
+                 {{ it.elevation }},
+                 {{ it.cordillera_id }},
+                 {% if it.cordillera_name_ja %}"{{ it.cordillera_name_ja }}"{% else %}None{% endif %},
+                 {% if it.cordillera_name_en %}"{{ it.cordillera_name_en }}"{% else %}None{% endif %}),
+        {%- endfor %}
+    ]
+
+    print(MOUNTAINS)
+'''
+template = Template(textwrap.dedent(source))
+
+print(template.render(mountains=mountain_summary_df.to_dict('records')))
