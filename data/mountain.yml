@@ -215,3 +215,19 @@
   name_ja: 那須岳
   name_en: Mount Nasu
   elevation: 1917
+- id: 55
+  name_ja: 蓼科山
+  name_en: Mount Tateshina
+  elevation: 2531
+- id: 56
+  name_ja: 景信山
+  name_en: Mount Kagenobu
+  elevation: 727
+- id: 57
+  name_ja: 小仏城山
+  name_en: Mount Kobotoke-Shiroyama
+  elevation: 670
+- id: 58
+  name_ja: 石老山
+  name_en: Mount Sekirou
+  elevation: 702

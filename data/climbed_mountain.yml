@@ -206,3 +206,21 @@
 - id: 68
   mountain_id: 54
   climbed_on: 2022-11
+- id: 69
+  mountain_id: 55
+  climbed_on: 2022-11
+- id: 70
+  mountain_id: 28
+  climbed_on: 2022-12
+- id: 71
+  mountain_id: 56
+  climbed_on: 2022-12
+- id: 72
+  mountain_id: 57
+  climbed_on: 2022-12
+- id: 73
+  mountain_id: 1
+  climbed_on: 2022-12
+- id: 74
+  mountain_id: 58
+  climbed_on: 2023-01
