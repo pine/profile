@@ -1,0 +1,21 @@
+{% extends 'page.html' %}
+
+{% block content_title %}{{ page.title }}{% endblock %}
+{% block content_title_en %}Mountain{% endblock %}
+
+{% block content %}
+  <section>
+    <h3>登山</h3>
+    <p>2017 年の夏より登山をはじめました。</p>
+  </section>
+
+  <section>
+    <h3>登った山一覧</h3>
+    <p>頂上まで登った山の一覧です。</p>
+    <ul>
+        {% for mountain in MOUNTAINS %}
+            <li>{{ mountain.climbed_on }} {{ mountain.mountain_name_ja }} ... {{ '{:,d}m'.format(mountain.elevation) }}</li>
+        {% endfor %}
+    </ul>
+  </section>
+{% endblock %}

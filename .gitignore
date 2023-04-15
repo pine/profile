@@ -1,2 +1,7 @@
+# Python
 .venv/
-generated.py
+__pycache__/
+
+# Project
+public/
+data/preprocessed.py

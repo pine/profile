@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+/* 全般 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+sup {
+    vertical-align: super;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+:lang(en) {
+    font-family: Calibri, Georgia, sans-serif;
+}
+
+:lang(ja) {
+    font-family: "メイリオ", "ヒラギノ角ゴ ProN W3", sans-serif;
+}
+
+/* 黒背景用 リンク文字色 */
+a:link {
+    color: #4287ff;
+}
+
+a:visited {
+    color: #a058c9;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+a:active {
+    color: #ff8000;
+}
+
+/* clearfix */
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* clearfix for IE */
+.clearfix {
+    zoom: 1;
+}
+
+/* 全体 */
+body {
+    position: relative;
+    background: black repeat fixed;
+    padding: 30px 0;
+    color: black;
+    height: 100%;
+}
+
+body > section {
+    margin: 0 auto;
+    width: 800px;
+}
+
+/* ヘッダ */
+body > section > header {
+    position: relative;
+    padding: 0 30px;
+    border: 1px solid white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 738px;
+    line-height: 85px;
+    background: rgba(0, 0, 0, .45);
+}
+
+body > section > header a {
+    color: white !important;
+    text-decoration: none;
+}
+
+body > section > header h1 {
+    letter-spacing: 7px;
+    font-style: italic;
+    font-size: 35px;
+}
+
+body > section > header p {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 35px 0 10px;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    height: 70px;
+    background: rgba(255, 255, 255, .5);
+    color: black;
+    font-size: 16px;
+}
+
+/* 三角形 */
+body > section > header p:before {
+    display: block;
+    position: absolute;
+    left: -49px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: solid 49px transparent;
+    border-bottom: solid 85px rgba(255, 255, 255, .5);
+    content: "";
+}
+
+/* ラップ */
+.wrap {
+    margin: 20px 0 0 0;
+    border: 1px solid white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, .65);
+    zoom: 1; /* clearfix for IE */
+}
+
+/* clearfix */
+.wrap:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* メニュー */
+.wrap > nav {
+    float: left;
+    width: 230px;
+    border-right: 1px solid white;
+}
+
+.wrap > nav header {
+    position: relative;
+    padding: 0 0 0 20px;
+    line-height: 35px;
+    border-bottom: 1px dashed white;
+}
+
+.wrap > nav header h2 {
+    color: white;
+    font-size: 16px;
+}
+
+.wrap > nav header p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 18px 0 10px;
+    height: 32px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, .5);
+}
+
+.wrap > nav ul {
+    margin: 15px;
+    line-height: 1.4;
+    list-style: inside square;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* 三角形 */
+.wrap > nav header p:before {
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: solid 20px transparent;
+    border-bottom: solid 35px rgba(255, 255, 255, .5);
+    content: "";
+}
+
+
+/* 記事 */
+.wrap > article {
+    margin: 0 0 0 230px;
+    padding-bottom: 15px;
+    width: 566px;
+    border-left: 1px solid white;
+}
+
+.wrap > article header {
+    position: relative;
+    padding: 0 0 0 20px;
+    line-height: 35px;
+    border-bottom: 1px dashed white;
+}
+
+.wrap > article header h2 {
+    color: white;
+    font-size: 16px;
+}
+
+.wrap > article header p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 20px 0 10px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-right-radius: 20px;
+    height: 32px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, .5);
+}
+
+.wrap > article > footer {
+    padding: 10px 10px 0;
+    margin: 20px 15px 0;
+    border-top: 1px solid #7a7a7a;
+    color: #c4c4c4;
+    font-size: 12px;
+}
+
+/* 三角形 */
+.wrap > article header p:before {
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border-left: solid 20px transparent;
+    border-bottom: solid 35px rgba(255, 255, 255, .5);
+}
+
+/* 本文 */
+.wrap > article > section {
+    margin: 15px 15px 0 15px;
+    padding-left: 1em;
+    line-height: 1.3;
+    font-size: 14px;
+    color: white;
+}
+
+.wrap > article > section h3 {
+    margin: 15px 0 15px -1em;
+    padding: 0 0 3px 0;
+    border-bottom: 3px double white;
+    color: #adceff;
+    font-size: 15px;
+}
+
+.wrap > article > section h3:before {
+    display: inline;
+    content: "★";
+}
+
+.wrap > article > section p {
+    margin: .9em 0;
+}
+
+.wrap > article > section p small {
+    font-size: 12px;
+}
+
+.wrap > article > section ul {
+    margin-left: 20px;
+    list-style: outside square;
+}
+
+.wrap > article > section ul ul {
+    margin-bottom: .9em;
+}
+
+/* フッター */
+body > section > footer {
+    margin: 20px 0 0 0;
+    padding: 20px 30px;
+    border: 1px solid white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 738px;
+    min-height: 80px;
+    line-height: 1.3;
+    background: url(../images/html5-14843f96ee2b25b0f6cb21f93fa60609.png) no-repeat 688px center !important; /* important: PIE での上書きを避けるため */
+    background-color: rgba(0, 0, 0, .65) !important; /* important: background の important を上書きするため */
+    color: white;
+    font-size: 13px;
+}

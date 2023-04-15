@@ -1,5 +1,3 @@
-# coding: utf-8
-
 import pandas as pd
 import textwrap
 import yaml
@@ -47,8 +45,6 @@ mountain_summary_df = climbed_df.merge(mountain_df) \
 
 
 source = '''\
-    # coding: utf-8
-
     from typing import NamedTuple
 
     class Mountain(NamedTuple):
@@ -73,8 +69,6 @@ source = '''\
                  {% if it.cordillera_name_en %}"{{ it.cordillera_name_en }}"{% else %}None{% endif %}),
         {%- endfor %}
     ]
-
-    print(MOUNTAINS)
 '''
 template = Template(textwrap.dedent(source))
 

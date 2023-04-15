@@ -1,0 +1,80 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stylesheets/html5reset.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stylesheets/main.css">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  </head>
+
+
+  <body>
+  <section>
+
+    <header>
+      <a href="/">
+        <h1 lang="en">Pine Profile</h1>
+        <p>水音氷音 (ぴね) プロフィール</p>
+      </a>
+    </header>
+
+    <div class="wrap">
+      <nav>
+        <header>
+          <h2 lang="en">Menu</h2>
+          <p>メニュー</p>
+        </header>
+          <@functions.menu pages=layout.pages />
+      </nav>
+
+      <article>
+        <header>
+          <h2 lang="en">{% block content_title_en %}{% endblock %}</h2>
+          <p>{% block content_title %}{% endblock %}</p>
+        </header>
+
+        {% block content %}{% endblock %}
+      </article>
+    </div>
+
+    <footer lang="en">
+      <p>
+        <small><a href="http://www.yunphoto.net" target="_blank" rel="noopener">Photo by (c)Tomo.Yun</a></small>
+      </p>
+      <p>
+        <small>Powered by Spring Framework.</small>
+      </p>
+      <p>
+        <small>This page is
+          <a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">valid HTML5</a>,
+          and hosted on
+          <a href="https://github.com/pine/profile-website" target="_blank" rel="noopener">GitHub</a>.
+        </small>
+      </p>
+      <p>
+        <small>Recommended Browsers: Firefox 3.5+, Google Chrome 7+, Opera 10.5+, Safari 5+</small>
+      </p>
+      <p>
+        <small>Copyright &copy; 2011-2012, 2014-2023 <strong lang="ja">水音氷音 (ぴね)</strong>. All Rights Reserved.</small>
+      </p>
+    </footer>
+
+  </section>
+
+
+<script>
+(function() {
+    var baseUrl = '{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/bg';
+    var images = [ 'yun_1077.jpg', 'yun_1375.jpg', 'yun_3218.jpg', 'yun_3281.jpg', 'yun_7604.jpg' ];
+    var imageUrl = baseUrl + '/' + images[Math.floor(Math.random()*images.length)];
+
+    var elem = document.createElement('style');
+    document.head.appendChild(elem);
+
+    var styleSheet = elem.sheet;
+    styleSheet.insertRule('body { background-image: url("' + imageUrl + '") }');
+})();
+</script>
+
+</body>
+</html>
