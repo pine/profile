@@ -230,3 +230,15 @@
 - id: 76
   mountain_id: 18
   climbed_on: 2023-03
+- id: 77
+  mountain_id: 60
+  climbed_on: 2023-04
+- id: 78
+  mountain_id: 5
+  climbed_on: 2023-05
+- id: 79
+  mountain_id: 21
+  climbed_on: 2023-05
+- id: 80
+  mountain_id: 61
+  climbed_on: 2023-06

@@ -235,3 +235,11 @@
   name_ja: 霧ヶ峰
   name_en: Mount Kirigamine
   elevation: 1925
+- id: 60
+  name_ja: 荒船山
+  name_en: Mount Arafune
+  elevation: 1423
+- id: 61
+  name_ja: 苗場山
+  name_en: Mount Naeba
+  elevation: 2145
